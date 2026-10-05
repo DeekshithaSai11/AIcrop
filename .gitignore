@@ -6,3 +6,4 @@ uploads/*
 dataset/
 model/static/tts_cache/
 static/tts_cache/
+.venv/ 

@@ -2,15 +2,27 @@
 routes/dashboard_routes.py
 Handles user dashboard and complete prediction history with localization and error resilience.
 """
+from datetime import datetime, timezone
 import logging
+from zoneinfo import ZoneInfo
 from flask import Blueprint, render_template, session
 from bson.objectid import ObjectId
 from db import users_collection, crop_predictions_collection, disease_predictions_collection, is_db_connected
 from utils.auth_utils import login_required
+from utils.model_loader import get_crop_info
 from utils.translations import get_crop_translation, get_disease_translation
 
 logger = logging.getLogger("AgriAI.Dashboard")
 dashboard_bp = Blueprint("dashboard", __name__)
+_IST = ZoneInfo("Asia/Kolkata")
+
+
+def _format_ist_timestamp(value):
+    if not isinstance(value, datetime):
+        return ""
+    if value.tzinfo is None:
+        value = value.replace(tzinfo=timezone.utc)
+    return value.astimezone(_IST).strftime("%Y-%m-%d %H:%M")
 
 
 @dashboard_bp.route("/dashboard")
@@ -52,9 +64,20 @@ def dashboard():
 
     # Localize crop names
     for c in recent_crops:
+        c["created_at_ist"] = _format_ist_timestamp(c.get("created_at"))
         crop_raw = c.get("recommended_crop", "")
         c_info = get_crop_translation(crop_raw, lang)
         c["localized_crop"] = c_info.get("name", crop_raw.title())
+        c["pdf_crop_details"] = get_crop_info(crop_raw, lang=lang)
+        c["pdf_alternatives"] = [
+            {
+                "crop_key": alternative["crop_key"],
+                "crop_name": get_crop_translation(alternative["crop_key"], lang).get(
+                    "name", alternative["crop_key"].title()
+                ),
+            }
+            for alternative in c.get("alternatives", [])
+        ]
         if c.get("confidence") not in (None, ""):
             try:
                 c["confidence"] = round(float(c["confidence"]), 2)
@@ -63,6 +86,7 @@ def dashboard():
 
     # Localize disease names and treatment text (used by the per-row PDF report)
     for d in recent_diseases:
+        d["created_at_ist"] = _format_ist_timestamp(d.get("created_at"))
         disease_raw = d.get("disease_name", "")
         d_info = get_disease_translation(disease_raw, lang)
         d["localized_disease"] = d_info.get("name", disease_raw)
@@ -106,6 +130,7 @@ def history():
         logger.warning("History query error: %s", e)
 
     for c in all_crops:
+        c["created_at_ist"] = _format_ist_timestamp(c.get("created_at"))
         crop_raw = c.get("recommended_crop", "")
         c_info = get_crop_translation(crop_raw, lang)
         c["localized_crop"] = c_info.get("name", crop_raw.title())
@@ -115,6 +140,7 @@ def history():
             c["confidence"] = 99.0
 
     for d in all_diseases:
+        d["created_at_ist"] = _format_ist_timestamp(d.get("created_at"))
         disease_raw = d.get("disease_name", "")
         d_info = get_disease_translation(disease_raw, lang)
         d["localized_disease"] = d_info.get("name", disease_raw)

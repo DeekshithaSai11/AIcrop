@@ -65,22 +65,26 @@ STRINGS = {
         "analyzing_desc": "Running MobileNetV2 neural network for accurate disease identification",
         
         # Results
-        "result_recommended_crop": "Recommended Crop",
-        "result_confidence": "Model Confidence",
-        "result_growing_conditions": "Optimal Growing Conditions",
-        "result_season": "Optimal Season",
-        "result_soil": "Recommended Soil Type",
-        "result_care": "Farming & Care Guide",
-        "result_leaf_status": "Health Status",
-        "result_status_healthy": "HEALTHY PLANT",
-        "result_status_diseased": "DISEASE DETECTED",
-        "result_disease_detected": "Diagnosed Disease",
-        "result_cause": "Cause & Pathology",
-        "result_symptoms": "Visible Symptoms",
-        "result_treatment": "Recommended Treatment (Chemical/Fungicidal)",
-        "result_organic": "Organic & Natural Control",
-        "result_prevention": "Preventive Measures",
-        "result_alternative_crops": "Other Viable Crops",
+        "result_recommended_crop": "Crop to grow",
+        "result_confidence": "How sure the system is",
+        "result_growing_conditions": "Best conditions for growing",
+        "result_season": "Best time to grow",
+        "result_soil": "Best soil",
+        "result_care": "How to care for the crop",
+        "result_leaf_status": "Leaf health",
+        "result_status_healthy": "HEALTHY LEAF",
+        "result_status_diseased": "PROBLEM FOUND",
+        "result_disease_detected": "Problem found",
+        "result_cause": "Why this happened",
+        "result_symptoms": "What you can see",
+        "result_treatment": "What to do",
+        "result_organic": "Natural ways to protect the crop",
+        "result_prevention": "How to prevent the problem",
+        "result_alternative_crops": "Other crops you can grow",
+        "pdf_report_suffix": "Report",
+        "pdf_model_output": "Crop name",
+        "pdf_soil_climate_inputs": "Soil and weather details",
+        "pdf_generated_on": "Generated on",
         
         # Dashboard
         "stat_total_predictions": "Total Predictions",
@@ -128,7 +132,7 @@ STRINGS = {
         "badge_disease_classes": "29 Disease Classes",
         "crop_card_desc": "Trained on verified soil and climatic parameters. Enter your Nitrogen, Phosphorus, Potassium levels, along with temperature, humidity, pH, and precipitation to receive the optimal crop choice with genuine model probability.",
         "disease_card_desc": "Leveraging a MobileNetV2 convolutional neural network. Simply snap or drag-and-drop a leaf photograph to instantly diagnose disease pathology, biological causes, symptoms, and organic & chemical treatments.",
-        "badge_npk": "🧪 N-P-K Analysis",
+        "badge_npk": "🧪 Soil nutrient levels",
         "badge_weather": "🌦️ Weather Integration",
         "badge_rf": "🌲 Random Forest ML",
         "badge_voice": "🔊 Multi-Language Voice",
@@ -153,12 +157,12 @@ STRINGS = {
         "preset_apple": "🍎 Apple",
         "section_soil_nutrients": "🧪 Soil Macronutrients (kg/ha)",
         "section_weather_soil": "🌦️ Weather & Soil Conditions",
-        "badge_ai_recommendation": "✓ AI Recommendation",
-        "label_model_output": "Model Output:",
-        "label_opt_temperature": "🌡️ Optimal Temperature",
-        "label_opt_humidity": "💧 Optimal Humidity",
-        "label_ideal_ph": "🧪 Ideal Soil pH",
-        "label_annual_rainfall": "🌧️ Annual Rainfall",
+        "badge_ai_recommendation": "✓ Crop suggestion",
+        "label_model_output": "Crop name:",
+        "label_opt_temperature": "🌡️ Best temperature",
+        "label_opt_humidity": "💧 Best humidity",
+        "label_ideal_ph": "🧪 Best soil pH",
+        "label_annual_rainfall": "🌧️ Rain needed in a year",
 
         # Disease page
         "disease_subtitle": "Upload a clear leaf photo for deep-learning plant disease diagnosis.",
@@ -166,9 +170,9 @@ STRINGS = {
         "btn_browse": "📁 Browse Device Photo",
         "engine_select_label": "🧠 Select AI Diagnosis Model Engine",
         "engine_select_hint": "Choose between AgriAI MobileNetV2 (29 classes, fast) or Crop-Disease-Detection CNN (38 classes, extended).",
-        "alt_diagnoses_label": "Alternative Diagnostic Possibilities:",
-        "label_model_tag": "Model Tag:",
-        "label_plant": "Plant:",
+        "alt_diagnoses_label": "Other possible problems:",
+        "label_model_tag": "Disease name:",
+        "label_plant": "Crop:",
 
         # Dashboard
         "dashboard_subtitle": "Here is your agricultural AI diagnostic and recommendation summary.",
@@ -239,22 +243,26 @@ STRINGS = {
         "analyzing_desc": "सटीक रोग पहचान के लिए न्यूरल नेटवर्क मॉडल चल रहा है",
         
         # Results
-        "result_recommended_crop": "अनुशंसित फसल",
-        "result_confidence": "मॉडल सटीकता / आत्मविश्वास",
-        "result_growing_conditions": "अनुकूल विकास स्थितियां",
-        "result_season": "सर्वोत्तम बुवाई का मौसम",
-        "result_soil": "उपयुक्त मिट्टी",
-        "result_care": "कृषि व देखभाल मार्गदर्शिका",
-        "result_leaf_status": "पौधे का स्वास्थ्य स्तर",
-        "result_status_healthy": "स्वस्थ पौधा (कोई रोग नहीं)",
-        "result_status_diseased": "रोग का पता चला (उपचार आवश्यक)",
-        "result_disease_detected": "पहचाना गया रोग",
-        "result_cause": "रोग का कारण",
-        "result_symptoms": "दिखने वाले लक्षण",
-        "result_treatment": "अनुशंसित रासायनिक उपचार",
-        "result_organic": "जैविक एवं प्राकृतिक उपचार",
-        "result_prevention": "बचाव के उपाय",
-        "result_alternative_crops": "अन्य उपयुक्त फसलें",
+        "result_recommended_crop": "उगाने के लिए फसल",
+        "result_confidence": "सिस्टम को कितना भरोसा है",
+        "result_growing_conditions": "फसल उगाने के लिए अच्छी स्थितियां",
+        "result_season": "फसल उगाने का सही समय",
+        "result_soil": "अच्छी मिट्टी",
+        "result_care": "फसल की देखभाल कैसे करें",
+        "result_leaf_status": "पत्ती की सेहत",
+        "result_status_healthy": "पत्ती स्वस्थ है",
+        "result_status_diseased": "समस्या मिली",
+        "result_disease_detected": "मिली हुई समस्या",
+        "result_cause": "ऐसा क्यों हुआ",
+        "result_symptoms": "आप क्या देख सकते हैं",
+        "result_treatment": "क्या करें",
+        "result_organic": "फसल बचाने के प्राकृतिक तरीके",
+        "result_prevention": "समस्या से कैसे बचें",
+        "result_alternative_crops": "दूसरी फसलें जिन्हें आप उगा सकते हैं",
+        "pdf_report_suffix": "रिपोर्ट",
+        "pdf_model_output": "फसल का नाम",
+        "pdf_soil_climate_inputs": "मिट्टी और मौसम की जानकारी",
+        "pdf_generated_on": "रिपोर्ट तैयार की गई",
         
         # Dashboard
         "stat_total_predictions": "कुल भविष्यवाणियां",
@@ -302,7 +310,7 @@ STRINGS = {
         "badge_disease_classes": "29 रोग श्रेणियाँ",
         "crop_card_desc": "सत्यापित मिट्टी और जलवायु मापदंडों पर प्रशिक्षित। नाइट्रोजन, फास्फोरस, पोटाशियम, तापमान, आर्द्रता, pH और वर्षा दर्ज करें और सटीक फसल अनुशंसा प्राप्त करें।",
         "disease_card_desc": "MobileNetV2 कन्वोल्यूशनल न्यूरल नेटवर्क का उपयोग करते हुए — पत्ती की फोटो खींचें या अपलोड करें और तुरंत रोग, कारण, लक्षण, और जैविक व रासायनिक उपचार जानें।",
-        "badge_npk": "🧪 N-P-K विश्लेषण",
+        "badge_npk": "🧪 मिट्टी के पोषक तत्व",
         "badge_weather": "🌦️ मौसम एकीकरण",
         "badge_rf": "🌲 रैंडम फॉरेस्ट ML",
         "badge_voice": "🔊 बहुभाषी वॉइस",
@@ -327,12 +335,12 @@ STRINGS = {
         "preset_apple": "🍎 सेब",
         "section_soil_nutrients": "🧪 मिट्टी के मुख्य पोषक तत्व (किग्रा/हेक्टेयर)",
         "section_weather_soil": "🌦️ मौसम एवं मिट्टी की स्थिति",
-        "badge_ai_recommendation": "✓ AI अनुशंसा",
-        "label_model_output": "मॉडल परिणाम:",
-        "label_opt_temperature": "🌡️ अनुकूल तापमान",
-        "label_opt_humidity": "💧 अनुकूल आर्द्रता",
-        "label_ideal_ph": "🧪 आदर्श मिट्टी pH",
-        "label_annual_rainfall": "🌧️ वार्षिक वर्षा",
+        "badge_ai_recommendation": "✓ फसल की सलाह",
+        "label_model_output": "फसल का नाम:",
+        "label_opt_temperature": "🌡️ अच्छा तापमान",
+        "label_opt_humidity": "💧 हवा में अच्छी नमी",
+        "label_ideal_ph": "🧪 मिट्टी का सही pH",
+        "label_annual_rainfall": "🌧️ साल भर में जरूरी बारिश",
 
         # Disease page
         "disease_subtitle": "गहरी-शिक्षण पौध रोग निदान के लिए स्पष्ट पत्ती फोटो अपलोड करें।",
@@ -340,9 +348,9 @@ STRINGS = {
         "btn_browse": "📁 डिवाइस से फोटो चुनें",
         "engine_select_label": "🧠 AI निदान मॉडल इंजन चुनें",
         "engine_select_hint": "AgriAI MobileNetV2 (29 श्रेणियाँ, तेज़) या Crop-Disease-Detection CNN (38 श्रेणियाँ, विस्तारित) में से चुनें।",
-        "alt_diagnoses_label": "वैकल्पिक निदान संभावनाएं:",
-        "label_model_tag": "मॉडल टैग:",
-        "label_plant": "पौधा:",
+        "alt_diagnoses_label": "दूसरी संभावित समस्याएं:",
+        "label_model_tag": "रोग का नाम:",
+        "label_plant": "फसल:",
 
         # Dashboard
         "dashboard_subtitle": "यहाँ आपकी कृषि AI निदान और अनुशंसा का सारांश है।",
@@ -413,22 +421,36 @@ STRINGS = {
         "analyzing_desc": "తెగులు ఖచ్చితమైన గుర్తింపు కోసం న్యూరల్ నెట్‌వర్క్ నడుస్తోంది",
         
         # Results
-        "result_recommended_crop": "సిఫార్సు చేయబడిన పంట",
-        "result_confidence": "మోడల్ విశ్వసనీయత / ఖచ్చితత్వం",
-        "result_growing_conditions": "అనుకూల సాగు పరిస్థితులు",
-        "result_season": "అనువైన కాలం",
-        "result_soil": "అనువైన నేల రకం",
-        "result_care": "సాగు మరియు సంరక్షణ సూచనలు",
-        "result_leaf_status": "మొక్క ఆరోగ్య స్థితి",
-        "result_status_healthy": "ఆరోగ్యకరమైన మొక్క (తెగులు లేదు)",
-        "result_status_diseased": "తెగులు గుర్తించబడింది (చికిత్స అవసరం)",
-        "result_disease_detected": "గుర్తించిన తెగులు",
-        "result_cause": "తెగులుకు కారణం",
-        "result_symptoms": "కనిపించే లక్షణాలు",
-        "result_treatment": "రసాయన నివారణ చర్యలు",
-        "result_organic": "సేంద్రీయ మరియు సహజ నివారణ",
-        "result_prevention": "ముందస్తు జాగ్రత్తలు",
-        "result_alternative_crops": "ఇతర అనుకూలమైన పంటలు",
+        "result_recommended_crop": "పండించడానికి మంచి పంట",
+        "result_confidence": "వ్యవస్థకు ఎంత నమ్మకం ఉందో",
+        "result_growing_conditions": "పంట పెరగడానికి మంచి పరిస్థితులు",
+        "result_season": "పంట పెంచడానికి సరైన సమయం",
+        "result_soil": "మంచి నేల",
+        "result_care": "పంటను ఎలా చూసుకోవాలి",
+        "result_leaf_status": "ఆకు ఆరోగ్యం",
+        "result_status_healthy": "ఆకు ఆరోగ్యంగా ఉంది",
+        "result_status_diseased": "సమస్య కనిపించింది",
+        "result_disease_detected": "కనిపించిన సమస్య",
+        "result_cause": "ఇది ఎందుకు వచ్చింది",
+        "result_symptoms": "మీకు కనిపించేవి",
+        "result_treatment": "ఏం చేయాలి",
+        "result_organic": "పంటను కాపాడే సహజ మార్గాలు",
+        "result_prevention": "ఈ సమస్య రాకుండా ఎలా చూడాలి",
+        "result_alternative_crops": "మీరు పండించగల ఇతర పంటలు",
+        "pdf_report_suffix": "నివేదిక",
+        "pdf_model_output": "పంట పేరు",
+        "pdf_soil_climate_inputs": "నేల మరియు వాతావరణ వివరాలు",
+        "pdf_generated_on": "రూపొందించిన సమయం",
+        "badge_ai_recommendation": "✓ పంట సూచన",
+        "badge_npk": "🧪 నేలలోని పోషకాలు",
+        "label_model_output": "పంట పేరు:",
+        "label_opt_temperature": "🌡️ పంటకు సరైన ఉష్ణోగ్రత",
+        "label_opt_humidity": "💧 గాలిలో సరైన తేమ",
+        "label_ideal_ph": "🧪 నేలకు సరైన pH",
+        "label_annual_rainfall": "🌧️ ఏడాదికి కావాల్సిన వర్షం",
+        "alt_diagnoses_label": "ఇతర సమస్యలు ఉండే అవకాశం:",
+        "label_model_tag": "తెగులు పేరు:",
+        "label_plant": "పంట:",
         
         # Dashboard
         "stat_total_predictions": "మొత్తం ఫలితాలు",
@@ -476,79 +498,79 @@ STRINGS = {
 # Crop Translations (All 22 crops)
 CROPS_I18N = {
     "apple": {
-        "en": {"name": "Apple", "season": "Spring planting, autumn harvest in temperate zones.", "soil": "Well-drained loamy soil (pH 6.0 - 7.0)", "care": "Prune annually for canopy ventilation, maintain balanced potassium, and monitor for scab."},
-        "hi": {"name": "सेब (Apple)", "season": "शीतोष्ण क्षेत्रों में वसंत में बुवाई और शरद ऋतु में कटाई।", "soil": "अच्छी जल निकासी वाली दोमट मिट्टी (pH 6.0 - 7.0)", "care": "हवा के संचार के लिए वार्षिक छंटाई करें, संतुलित पोटाश दें और फफूंद पर नज़र रखें।"},
+        "en": {"name": "Apple", "season": "Plant in spring and harvest in autumn in mild-climate areas.", "soil": "Loamy soil that drains well (pH 6.0 - 7.0)", "care": "Cut back crowded branches once a year so air can pass through. Give balanced potassium and check for apple scab."},
+        "hi": {"name": "सेब (Apple)", "season": "ठंडे इलाकों में वसंत में लगाएं और पतझड़ में फल तोड़ें।", "soil": "ऐसी दोमट मिट्टी जिसमें पानी न रुके (pH 6.0 - 7.0)", "care": "साल में एक बार घनी डालियां काटें ताकि हवा आ-जा सके। संतुलित पोटाश दें और सेब के स्कैब रोग पर नज़र रखें।"},
         "te": {"name": "ఆపిల్ (Apple)", "season": "శీతల ప్రాంతాలలో వసంతకాలంలో నాటడం, శరదృతువులో కోత.", "soil": "మంచి నీటి పారుదల గల నేలలు (pH 6.0 - 7.0)", "care": "గాలి ప్రసరణకు కత్తిరింపులు చేయాలి మరియు పోషకాలను సమతుల్యంగా అందించాలి."}
     },
     "banana": {
-        "en": {"name": "Banana", "season": "Year-round in warm, humid tropical zones.", "soil": "Deep, fertile, well-draining organic loam (pH 5.5 - 7.0)", "care": "Requires heavy mulching, regular watering, and potassium-rich organic fertilizer."},
-        "hi": {"name": "केला (Banana)", "season": "गर्म और आर्द्र उष्णकटिबंधीय क्षेत्रों में साल भर।", "soil": "गहरी, उपजाऊ और जीवांश युक्त दोमट मिट्टी (pH 5.5 - 7.0)", "care": "नियमित सिंचाई करें, जड़ों के पास मल्चिंग करें और पोटाश युक्त जैविक खाद दें।"},
-        "te": {"name": "అరటి (Banana)", "season": "తేమతో కూడిన ఉష్ణమండల ప్రాంతాలలో ఏడాది పొడవునా సాగు చేయవచ్చు.", "soil": "సారవంతమైన సేంద్రీయ నేలలు (pH 5.5 - 7.0)", "care": "సమృద్ధిగా నీరు, మల్చింగ్ మరియు పొటాష్ ఎరువులు క్రమం తప్పకుండా వేయాలి."}
+        "en": {"name": "Banana", "season": "Can grow all year in warm, humid areas.", "soil": "Deep, fertile soil that drains well (pH 5.5 - 7.0)", "care": "Water regularly and cover the soil around plants with dry leaves or straw. Use fertilizer rich in potassium."},
+        "hi": {"name": "केला (Banana)", "season": "गर्म और नम इलाकों में साल भर उगा सकते हैं।", "soil": "गहरी, उपजाऊ और पानी निकालने वाली दोमट मिट्टी (pH 5.5 - 7.0)", "care": "नियमित पानी दें और पौधों के पास मिट्टी पर सूखे पत्ते या भूसा बिछाएं। पोटाश वाली खाद दें।"},
+        "te": {"name": "అరటి (Banana)", "season": "వేడి, తేమ ఉన్న ప్రాంతాల్లో ఏడాది పొడవునా సాగు చేయవచ్చు.", "soil": "లోతైన, సారవంతమైన నేల (pH 5.5 - 7.0)", "care": "క్రమం తప్పకుండా నీరు పెట్టండి. మొక్కల చుట్టూ ఎండిన ఆకులు లేదా గడ్డి పరచండి. పొటాష్ ఎక్కువగా ఉన్న ఎరువు వేయండి."}
     },
     "blackgram": {
-        "en": {"name": "Blackgram (Urad)", "season": "Kharif and summer pulse season.", "soil": "Well-drained loamy to heavy clay soil (pH 6.0 - 7.5)", "care": "Inoculate seeds with Rhizobium, ensure adequate moisture at flowering, avoid waterlogging."},
-        "hi": {"name": "उड़द (Blackgram)", "season": "खरीफ और ग्रीष्मकालीन दाल का मौसम।", "soil": "अच्छी जल निकासी वाली दोमट या चिकनी मिट्टी (pH 6.0 - 7.5)", "care": "राइजोबियम से बीजोपचार करें, फूल आते समय नमी बनाए रखें, जलभराव से बचाएं।"},
-        "te": {"name": "మినుములు (Blackgram)", "season": "ఖరీఫ్ మరియు వేసవి కాలం.", "soil": "నీరు నిలవని సారవంతమైన నేలలు (pH 6.0 - 7.5)", "care": "రైజోబియం విత్తన శుద్ధి చేయాలి, పూత దశలో తేమ ఉండేలా చూసుకోవాలి."}
+        "en": {"name": "Blackgram (Urad)", "season": "Grow during the rainy season or summer.", "soil": "Loamy or clay soil that drains well (pH 6.0 - 7.5)", "care": "Treat seeds with Rhizobium culture before sowing. Keep some soil moisture when flowers appear and do not let water collect around plants."},
+        "hi": {"name": "उड़द (Blackgram)", "season": "बरसात या गर्मी के मौसम में उगाएं।", "soil": "दोमट या चिकनी मिट्टी जिसमें पानी न रुके (pH 6.0 - 7.5)", "care": "बुवाई से पहले बीजों में राइजोबियम मिलाएं। फूल आने पर थोड़ी नमी रखें और पौधों के पास पानी न भरने दें।"},
+        "te": {"name": "మినుములు (Blackgram)", "season": "వర్షాకాలం లేదా వేసవిలో సాగు చేయండి.", "soil": "నీరు నిలవని సారవంతమైన నేల (pH 6.0 - 7.5)", "care": "విత్తే ముందు విత్తనాలకు రైజోబియం కలపండి. పూత సమయంలో నేలలో కొద్దిగా తేమ ఉంచి, మొక్కల దగ్గర నీరు నిలవకుండా చూడండి."}
     },
     "chickpea": {
-        "en": {"name": "Chickpea (Gram)", "season": "Rabi (winter) season with cool, dry weather.", "soil": "Deep well-drained loam or silt loam (pH 6.0 - 7.5)", "care": "Requires minimal nitrogen due to nitrogen fixation; avoid excessive watering."},
-        "hi": {"name": "चना (Chickpea)", "season": "रबी (सर्दियों) का मौसम, ठंडी और शुष्क जलवायु।", "soil": "गहरी अच्छी जल निकासी वाली दोमट मिट्टी (pH 6.0 - 7.5)", "care": "नाइट्रोजन स्थिरीकरण के कारण कम यूरिया दें; अधिक सिंचाई से जड़ गलन का खतरा रहता है।"},
-        "te": {"name": "శనగలు (Chickpea)", "season": "రబీ (శీతాకాలం) అనువైనది.", "soil": "మంచి నీటి పారుదల గల నేలలు (pH 6.0 - 7.5)", "care": "అధిక నీటిని నివారించాలి, భాస్వరం ఎరువులను సరైన సమయంలో అందించాలి."}
+        "en": {"name": "Chickpea (Gram)", "season": "Grow in the cool, dry winter season.", "soil": "Deep loamy soil that drains well (pH 6.0 - 7.5)", "care": "Use little nitrogen fertilizer. Avoid overwatering, which can harm the roots."},
+        "hi": {"name": "चना (Chickpea)", "season": "ठंडे और सूखे सर्दियों के मौसम में उगाएं।", "soil": "गहरी, अच्छी जल निकासी वाली दोमट मिट्टी (pH 6.0 - 7.5)", "care": "नाइट्रोजन वाली खाद कम दें। अधिक पानी देने से जड़ों को नुकसान हो सकता है।"},
+        "te": {"name": "శనగలు (Chickpea)", "season": "శీతాకాలంలో సాగు చేయండి.", "soil": "నీరు నిలవని లోతైన నేల (pH 6.0 - 7.5)", "care": "నత్రజని ఎరువు తక్కువగా వేయండి. ఎక్కువ నీరు పెడితే వేర్లు దెబ్బతింటాయి."}
     },
     "coconut": {
-        "en": {"name": "Coconut", "season": "Tropical coastal areas, perennial year-round production.", "soil": "Sandy loam, alluvial or coastal red soils (pH 5.2 - 8.0)", "care": "Apply balanced NPK with magnesium and boron; maintain basin irrigation in summer."},
-        "hi": {"name": "नारियल (Coconut)", "season": "तटीय उष्णकटिबंधीय क्षेत्रों में साल भर।", "soil": "बलुई दोमट या तटीय लाल मिट्टी (pH 5.2 - 8.0)", "care": "मैग्नीशियम और बोरॉन के साथ संतुलित खाद दें; गर्मियों में थाला सिंचाई करें।"},
-        "te": {"name": "కొబ్బరి (Coconut)", "season": "తీర ప్రాంతాలలో ఏడాది పొడవునా సాగు చేయవచ్చు.", "soil": "ఇసుకతో కూడిన ఒండ్రు నేలలు (pH 5.2 - 8.0)", "care": "బోరాన్ మరియు సూక్ష్మ పోషకాలను క్రమం తప్పకుండా అందిస్తూ పాదులలో తేమ ఉంచాలి."}
+        "en": {"name": "Coconut", "season": "Grows all year in warm coastal areas.", "soil": "Sandy or river-plain soil (pH 5.2 - 8.0)", "care": "Give a balanced fertilizer with magnesium and boron. In summer, water around the base of each tree."},
+        "hi": {"name": "नारियल (Coconut)", "season": "गर्म तटीय इलाकों में साल भर उगता है।", "soil": "रेतीली या नदी के मैदान की मिट्टी (pH 5.2 - 8.0)", "care": "मैग्नीशियम और बोरॉन वाली संतुलित खाद दें। गर्मियों में पेड़ के चारों ओर पानी दें।"},
+        "te": {"name": "కొబ్బరి (Coconut)", "season": "వేడి తీర ప్రాంతాల్లో ఏడాది పొడవునా పెరుగుతుంది.", "soil": "ఇసుక లేదా నదీ మైదానపు నేల (pH 5.2 - 8.0)", "care": "మెగ్నీషియం, బోరాన్ ఉన్న సమతుల్య ఎరువు వేయండి. వేసవిలో చెట్టు చుట్టూ నీరు పెట్టండి."}
     },
     "coffee": {
-        "en": {"name": "Coffee", "season": "Rainy season planting under shade tree canopies.", "soil": "Porous, rich organic loam (pH 5.5 - 6.5)", "care": "Requires partial shade, leaf litter mulching, and pest management for coffee borer."},
-        "hi": {"name": "कॉफ़ी (Coffee)", "season": "छायादार पेड़ों के नीचे वर्षा ऋतु में रोपण।", "soil": "उपजाऊ, जीवांश युक्त दोमट मिट्टी (pH 5.5 - 6.5)", "care": "आंशिक छाया आवश्यक है; पत्तियों की मल्चिंग करें और बोरर कीट पर नियंत्रण रखें।"},
-        "te": {"name": "కాఫీ (Coffee)", "season": "నీడ చెట్ల కింద వర్షాకాలంలో నాటడం ఉత్తమం.", "soil": "సేంద్రీయ పోషకాలు సమృద్ధిగా ఉన్న నేలలు (pH 5.5 - 6.5)", "care": "పాక్షిక నీడ మరియు ఆకుల మల్చింగ్ ముఖ్యం; తెగుళ్ల నివారణ చేపట్టాలి."}
+        "en": {"name": "Coffee", "season": "Plant in the rainy season under shade trees.", "soil": "Loose, fertile soil with plenty of organic matter (pH 5.5 - 6.5)", "care": "Grow in partial shade. Spread fallen leaves around the soil and watch for coffee borer pests."},
+        "hi": {"name": "कॉफ़ी (Coffee)", "season": "बारिश के मौसम में छायादार पेड़ों के नीचे लगाएं।", "soil": "उपजाऊ, जैविक पदार्थ वाली दोमट मिट्टी (pH 5.5 - 6.5)", "care": "हल्की छाया रखें। मिट्टी पर सूखे पत्तों की परत बिछाएं और कॉफी के तने में छेद करने वाले कीट पर नज़र रखें।"},
+        "te": {"name": "కాఫీ (Coffee)", "season": "వర్షాకాలంలో నీడనిచ్చే చెట్ల కింద నాటండి.", "soil": "సేంద్రీయ పదార్థాలు ఉన్న సారవంతమైన నేల (pH 5.5 - 6.5)", "care": "కొద్దిగా నీడ ఉండేలా చూడండి. నేలపై ఎండిన ఆకుల పొర వేయండి; కాఫీ కాండంలో రంధ్రాలు చేసే పురుగులను గమనించండి."}
     },
     "cotton": {
-        "en": {"name": "Cotton", "season": "Kharif season sown after early pre-monsoon rains.", "soil": "Deep black cotton soils (Vertisols) or alluvial loam (pH 6.0 - 7.5)", "care": "Monitor for bollworms and sucking pests, avoid water stagnation, split nitrogen doses."},
-        "hi": {"name": "कपास (Cotton)", "season": "खरीफ मौसम, मानसून की पहली बारिश के बाद बुवाई।", "soil": "गहरी काली कपासी मिट्टी या दोमट मिट्टी (pH 6.0 - 7.5)", "care": "गुलाबी सुंडी और रस चूसक कीटों से रक्षा करें; जलभराव से बचें और यूरिया किस्तों में दें।"},
-        "te": {"name": "పత్తి (Cotton)", "season": "ఖరీఫ్ కాలం, తొలకరి వర్షాల అనంతరం విత్తడం.", "soil": "లోతైన నల్లరేగడి నేలలు లేదా ఎర్ర నేలలు (pH 6.0 - 7.5)", "care": "రసం పీల్చే పురుగులు మరియు గులాబీ రంగు కాయ తొలిచే పురుగు నివారణ ముఖ్యం."}
+        "en": {"name": "Cotton", "season": "Sow in the rainy season after the first rains.", "soil": "Deep black or fertile loamy soil that drains well (pH 6.0 - 7.5)", "care": "Watch for bollworms and sap-sucking pests. Prevent water from collecting, and give nitrogen fertilizer in smaller amounts at different times."},
+        "hi": {"name": "कपास (Cotton)", "season": "मानसून की पहली बारिश के बाद बीज बोएं।", "soil": "गहरी काली या उपजाऊ दोमट मिट्टी (pH 6.0 - 7.5)", "care": "गुलाबी सुंडी और रस चूसने वाले कीटों से बचाएं। खेत में पानी न भरने दें और यूरिया थोड़ी-थोड़ी मात्रा में दें।"},
+        "te": {"name": "పత్తి (Cotton)", "season": "తొలకరి వర్షాల తర్వాత విత్తండి.", "soil": "లోతైన నల్లరేగడి లేదా సారవంతమైన నేల (pH 6.0 - 7.5)", "care": "గులాబీ కాయతొలుచు పురుగు, రసం పీల్చే పురుగులను గమనించండి. పొలంలో నీరు నిలవకుండా చూసి, యూరియాను కొద్దికొద్దిగా వేయండి."}
     },
     "grapes": {
-        "en": {"name": "Grapes", "season": "Subtropical dry climate with distinct winter pruning.", "soil": "Deep, well-drained sandy loam or gravely loam (pH 6.0 - 7.5)", "care": "Train on bower or trellis; practice regular canopy pruning and preventive sprays against downy mildew."},
-        "hi": {"name": "अंगूर (Grapes)", "season": "शुष्क उपोष्णकटिबंधीय जलवायु, सर्दियों में विशेष छंटाई।", "soil": "गहरी अच्छी जल निकासी वाली बलुई दोमट मिट्टी (pH 6.0 - 7.5)", "care": "मंडप या ट्रेलिस पर बेल चढ़ाएं; नियमित छंटाई करें और डाउनी फफूंदी से बचाएं।"},
-        "te": {"name": "ద్రాక్ష (Grapes)", "season": "శీతోష్ణ మరియు పొడి వాతావరణం అనుకూలం.", "soil": "మంచి నీటి పారుదల గల ఇసుక నేలలు (pH 6.0 - 7.5)", "care": "పందిరి విధానం మరియు సమయానుకూల కత్తిరింపులు దిగుబడిని పెంచుతాయి."}
+        "en": {"name": "Grapes", "season": "Grow in warm, fairly dry areas; prune the vines in winter.", "soil": "Deep sandy or gravelly loam that drains well (pH 6.0 - 7.5)", "care": "Support the vines on a frame and trim crowded growth. Watch for downy mildew and take action early."},
+        "hi": {"name": "अंगूर (Grapes)", "season": "गर्म और कम बारिश वाले इलाकों में उगाएं; सर्दियों में बेल काट-छांट करें।", "soil": "गहरी रेतीली दोमट मिट्टी जिसमें पानी न रुके (pH 6.0 - 7.5)", "care": "बेल को सहारा देकर चढ़ाएं और घनी डालियां काटें। डाउनी फफूंदी दिखे तो जल्दी उपाय करें।"},
+        "te": {"name": "ద్రాక్ష (Grapes)", "season": "వేడి, తక్కువ వర్షం ఉండే ప్రాంతాల్లో పెంచండి; చలికాలంలో తీగలను కత్తిరించండి.", "soil": "నీరు నిలవని లోతైన ఇసుక నేల (pH 6.0 - 7.5)", "care": "తీగలకు ఆధారం ఇవ్వండి, గుబురుగా ఉన్న కొమ్మలను కత్తిరించండి. డౌనీ బూజు కనిపిస్తే వెంటనే చర్య తీసుకోండి."}
     },
     "jute": {
-        "en": {"name": "Jute", "season": "Pre-monsoon to monsoon warm, humid climate.", "soil": "Fertile alluvial floodplain soil (pH 6.0 - 7.2)", "care": "Maintain soil moisture in early stages; thin seedlings at 3 weeks; retting requires clean water."},
-        "hi": {"name": "जूट / पटसन (Jute)", "season": "मानसून पूर्व से मानसूनी गर्म और आर्द्र जलवायु।", "soil": "उपजाऊ जलोढ़ कछारी मिट्टी (pH 6.0 - 7.2)", "care": "शुरुआती अवस्था में मिट्टी में नमी रखें; 3 सप्ताह बाद विरलीकरण करें; सड़ाने हेतु साफ पानी चाहिए।"},
-        "te": {"name": "జనపనార (Jute)", "season": "వర్షాకాలంలో వేడి మరియు తేమ గల వాతావరణం.", "soil": "సారవంతమైన ఒండ్రు నేలలు (pH 6.0 - 7.2)", "care": "మొక్కల తొలి దశలో సరైన తేమ అందించాలి మరియు కలుపు నివారణ చేయాలి."}
+        "en": {"name": "Jute", "season": "Grow in warm, humid weather before and during the rainy season.", "soil": "Fertile soil on river plains (pH 6.0 - 7.2)", "care": "Keep the soil moist while plants are young. Remove extra seedlings after three weeks. After harvest, soak the stems in clean water to loosen the fibers."},
+        "hi": {"name": "जूट / पटसन (Jute)", "season": "बारिश से पहले और बारिश के मौसम में, जब मौसम गर्म और नम हो।", "soil": "नदी के मैदान की उपजाऊ मिट्टी (pH 6.0 - 7.2)", "care": "पौधे छोटे हों तो मिट्टी में नमी रखें। तीन सप्ताह बाद अतिरिक्त पौधे निकाल दें। कटाई के बाद तनों को साफ पानी में भिगोकर रेशे अलग करें।"},
+        "te": {"name": "జనపనార (Jute)", "season": "వర్షాకాలానికి ముందు, వర్షాకాలంలో వేడి, తేమ ఉన్నప్పుడు సాగు చేయండి.", "soil": "నదీ మైదానాల్లోని సారవంతమైన నేల (pH 6.0 - 7.2)", "care": "మొక్కలు చిన్నగా ఉన్నప్పుడు నేలలో తేమ ఉంచండి. మూడు వారాల తర్వాత అదనపు మొక్కలను తీసేయండి. కోత తర్వాత కాండాలను శుభ్రమైన నీటిలో నానబెట్టి పీచును వేరు చేయండి."}
     },
     "kidneybeans": {
-        "en": {"name": "Kidney Beans (Rajma)", "season": "Kharif in hills; Rabi in northern plains.", "soil": "Light rich loam with excellent internal drainage (pH 5.5 - 6.5)", "care": "Sensitive to waterlogging and salinity; apply phosphorus at sowing for strong root nodules."},
-        "hi": {"name": "राजमा (Kidney Beans)", "season": "पहाड़ों में खरीफ; उत्तरी मैदानी इलाकों में रबी।", "soil": "उत्कृष्ट जल निकास वाली हल्की उपजाऊ दोमट मिट्टी (pH 5.5 - 6.5)", "care": "जलभराव और खारेपन के प्रति संवेदनशील; जड़ों के विकास हेतु बुवाई के समय फास्फोरस दें।"},
-        "te": {"name": "రాజ్మా (Kidney Beans)", "season": "శీతాకాలం లేదా కొండ ప్రాంతాలలో ఖరీఫ్.", "soil": "తేలికపాటి సారవంతమైన నేలలు (pH 5.5 - 6.5)", "care": "నీరు నిలబడకుండా చూడాలి; భాస్వరం ఎరువులను విత్తేటప్పుడే అందించాలి."}
+        "en": {"name": "Kidney Beans (Rajma)", "season": "Grow in the rainy season in hills and in winter in northern plains.", "soil": "Light, fertile soil that drains well (pH 5.5 - 6.5)", "care": "Do not let water collect around the plants. Add phosphorus fertilizer when sowing to help roots grow well."},
+        "hi": {"name": "राजमा (Kidney Beans)", "season": "पहाड़ों में बारिश के मौसम में और उत्तर के मैदानी इलाकों में सर्दियों में उगाएं।", "soil": "हल्की उपजाऊ दोमट मिट्टी जिसमें पानी न रुके (pH 5.5 - 6.5)", "care": "पौधों के पास पानी न भरने दें। जड़ों की अच्छी बढ़त के लिए बुवाई के समय फास्फोरस दें।"},
+        "te": {"name": "రాజ్మా (Kidney Beans)", "season": "కొండ ప్రాంతాల్లో వర్షాకాలంలో, ఉత్తర మైదానాల్లో శీతాకాలంలో సాగు చేయండి.", "soil": "నీరు నిలవని తేలికపాటి సారవంతమైన నేల (pH 5.5 - 6.5)", "care": "మొక్కల దగ్గర నీరు నిలవకుండా చూడండి. వేర్లు బాగా పెరగడానికి విత్తేటప్పుడు భాస్వరం ఎరువు వేయండి."}
     },
     "lentil": {
-        "en": {"name": "Lentil (Masoor)", "season": "Rabi (winter) season pulse crop.", "soil": "Can grow on poor soils; prefers light loamy soil (pH 6.0 - 7.5)", "care": "Low water requirement; requires weed management during the first 45 days after germination."},
-        "hi": {"name": "मसूर (Lentil)", "season": "रबी (सर्दियों) की दलहनी फसल।", "soil": "हल्की दोमट मिट्टी उपयुक्त; कम उपजाऊ मिट्टी में भी संभव (pH 6.0 - 7.5)", "care": "कम पानी की आवश्यकता; अंकुरण के पहले 45 दिनों में खरपतवार नियंत्रण अत्यंत आवश्यक है।"},
-        "te": {"name": "ఎర్ర కందులు (Lentil)", "season": "రబీ కాలం అనుకూలం.", "soil": "తేలికపాటి గరప నేలలు (pH 6.0 - 7.5)", "care": "తక్కువ నీటితో పండుతుంది; మొదటి 45 రోజులలో కలుపు నివారించాలి."}
+        "en": {"name": "Lentil (Masoor)", "season": "Grow in the winter season.", "soil": "Can grow in poor soil but does best in light loamy soil (pH 6.0 - 7.5)", "care": "Needs little water. Remove weeds during the first 45 days after the seeds sprout."},
+        "hi": {"name": "मसूर (Lentil)", "season": "सर्दियों में उगाएं।", "soil": "हल्की दोमट मिट्टी सबसे अच्छी है; कम उपजाऊ मिट्टी में भी उगा सकते हैं (pH 6.0 - 7.5)", "care": "कम पानी दें। बीज उगने के बाद पहले 45 दिनों तक खेत से घास-फूस निकालते रहें।"},
+        "te": {"name": "ఎర్ర కందులు (Lentil)", "season": "శీతాకాలంలో సాగు చేయండి.", "soil": "తేలికపాటి నేలలో బాగా పెరుగుతుంది (pH 6.0 - 7.5)", "care": "తక్కువ నీరు చాలు. విత్తనాలు మొలిచిన తర్వాత మొదటి 45 రోజులు కలుపు మొక్కలను తీసేయండి."}
     },
     "maize": {
-        "en": {"name": "Maize (Corn)", "season": "Kharif and Rabi seasons in warm conditions.", "soil": "Well-drained fertile loam rich in organic matter (pH 5.8 - 7.5)", "care": "Critical irrigation needed at tasseling and silking stages; manage fall armyworm early."},
-        "hi": {"name": "मक्का (Maize / Corn)", "season": "खरीफ और रबी दोनों मौसमों में उपयुक्त।", "soil": "जीवांश से भरपूर अच्छी जल निकासी वाली दोमट मिट्टी (pH 5.8 - 7.5)", "care": "मंजरी और भुट्टा बनते समय सिंचाई आवश्यक है; फॉल आर्मीवर्म कीट से सुरक्षा करें।"},
-        "te": {"name": "మొక్కజొన్న (Maize)", "season": "ఖరీఫ్ మరియు రబీ రెండు కాలాలలో సాగు చేయవచ్చు.", "soil": "సారవంతమైన ఒండ్రు నేలలు (pH 5.8 - 7.5)", "care": "పూత మరియు గింజ పాలు పోసుకునే దశలలో నీటి తడులు తప్పనిసరి; కత్తెర పురుగు నివారణ ముఖ్యం."}
+        "en": {"name": "Maize (Corn)", "season": "Grow in warm weather during the rainy or winter season.", "soil": "Fertile loamy soil that drains well (pH 5.8 - 7.5)", "care": "Water the crop when tassels and ears are forming. Watch for fall armyworm and act early."},
+        "hi": {"name": "मक्का (Maize / Corn)", "season": "गर्म मौसम में बरसात या सर्दियों के दौरान उगाएं।", "soil": "उपजाऊ दोमट मिट्टी जिसमें पानी न रुके (pH 5.8 - 7.5)", "care": "जब बालियां और भुट्टे बन रहे हों तब पानी दें। फॉल आर्मीवर्म दिखे तो जल्दी उपाय करें।"},
+        "te": {"name": "మొక్కజొన్న (Maize)", "season": "వర్షాకాలం లేదా శీతాకాలంలో వేడి వాతావరణం ఉన్నప్పుడు సాగు చేయండి.", "soil": "సారవంతమైన, నీరు నిలవని నేల (pH 5.8 - 7.5)", "care": "కంకులు, పొత్తులు ఏర్పడే సమయంలో నీరు పెట్టండి. కత్తెర పురుగు కనిపిస్తే వెంటనే చర్య తీసుకోండి."}
     },
     "mango": {
-        "en": {"name": "Mango", "season": "Tropical and subtropical climates; flowering in winter.", "soil": "Deep rich alluvial or red loamy soil (pH 5.5 - 7.5)", "care": "Stop irrigation prior to flowering; spray against powdery mildew and mango hoppers during flower set."},
-        "hi": {"name": "आम (Mango)", "season": "उष्णकटिबंधीय जलवायु; सर्दियों में बौर (फूल) आते हैं।", "soil": "गहरी उपजाऊ जलोढ़ या लाल दोमट मिट्टी (pH 5.5 - 7.5)", "care": "फूल आने से पहले सिंचाई बंद करें; बौर आते समय मधुआ कीट और फफूंद से बचाव करें।"},
-        "te": {"name": "మామిడి (Mango)", "season": "ఉష్ణ మరియు సమశీతోష్ణ వాతావరణం; శీతాకాలంలో పూత వస్తుంది.", "soil": "లోతైన సారవంతమైన ఎర్ర నేలలు (pH 5.5 - 7.5)", "care": "పూతకు ముందు నీటి తడులు ఆపాలి; తేనెమంచు పురుగు నివారణకు మందులు పిచికారీ చేయాలి."}
+        "en": {"name": "Mango", "season": "Grows in warm areas and flowers in winter.", "soil": "Deep, fertile river-plain or red loamy soil (pH 5.5 - 7.5)", "care": "Reduce watering before flowering. Watch for powdery mildew and mango hoppers when flowers appear."},
+        "hi": {"name": "आम (Mango)", "season": "गर्म इलाकों में उगता है और सर्दियों में फूल देता है।", "soil": "गहरी उपजाऊ नदी के मैदान की या लाल दोमट मिट्टी (pH 5.5 - 7.5)", "care": "फूल आने से पहले पानी कम दें। फूल निकलते समय मधुआ कीट और सफेद फफूंद पर नज़र रखें।"},
+        "te": {"name": "మామిడి (Mango)", "season": "వేడి ప్రాంతాల్లో పెరుగుతుంది, శీతాకాలంలో పూత వస్తుంది.", "soil": "లోతైన సారవంతమైన నేల (pH 5.5 - 7.5)", "care": "పూతకు ముందు నీరు తగ్గించండి. పూలు వచ్చేటప్పుడు తేనెమంచు పురుగులు, తెల్లని బూజును గమనించండి."}
     },
     "mothbeans": {
-        "en": {"name": "Mothbeans (Matki)", "season": "Kharif season; highly drought-resistant legume.", "soil": "Sandy or light loam suited for arid tracts (pH 6.5 - 8.0)", "care": "Minimal inputs needed; acts as an excellent soil conservation and nitrogen-enriching crop."},
-        "hi": {"name": "मोठ (Mothbeans)", "season": "खरीफ मौसम; अत्यधिक सूखा सहनशील दलहनी फसल।", "soil": "शुष्क क्षेत्रों के लिए उपयुक्त रेतीली या हल्की दोमट (pH 6.5 - 8.0)", "care": "बहुत कम पानी व खाद की जरूरत; मिट्टी संरक्षण और नाइट्रोजन बढ़ाने में मददगार।"},
-        "te": {"name": "బొబ్బర్లు / మోత్ బీన్స్", "season": "ఖరీఫ్ కాలం; కరువును తట్టుకునే పప్పుధాన్య పంట.", "soil": "ఇసుక లేదా తేలికపాటి నేలలు (pH 6.5 - 8.0)", "care": "తక్కువ పెట్టుబడితో సాగు చేయవచ్చు; నేల సారాన్ని పెంచుతుంది."}
+        "en": {"name": "Mothbeans (Matki)", "season": "Grow during the rainy season; it can withstand dry weather.", "soil": "Sandy or light loamy soil for dry areas (pH 6.5 - 8.0)", "care": "Needs little water and fertilizer. It helps protect the soil and make it more fertile."},
+        "hi": {"name": "मोठ (Mothbeans)", "season": "बारिश के मौसम में उगाएं; यह सूखा सह सकता है।", "soil": "सूखे इलाकों की रेतीली या हल्की दोमट मिट्टी (pH 6.5 - 8.0)", "care": "कम पानी और खाद चाहिए। यह मिट्टी को बचाने और उपजाऊ बनाने में मदद करता है।"},
+        "te": {"name": "బొబ్బర్లు / మోత్ బీన్స్", "season": "వర్షాకాలంలో సాగు చేయండి; ఇది ఎండను తట్టుకోగలదు.", "soil": "ఎండ ప్రాంతాలకు ఇసుక లేదా తేలికపాటి నేల (pH 6.5 - 8.0)", "care": "తక్కువ నీరు, ఎరువు చాలు. నేలను కాపాడి సారవంతం చేయడంలో సహాయపడుతుంది."}
     },
     "mungbean": {
-        "en": {"name": "Mungbean (Green Gram)", "season": "Kharif, Rabi, and summer short-duration pulse.", "soil": "Well-drained loam or sandy loam (pH 6.2 - 7.2)", "care": "Matures in 60-70 days; protect from yellow mosaic virus via whitefly control."},
-        "hi": {"name": "मूंग (Mungbean)", "season": "खरीफ, रबी और जायद (गर्मी) की अल्पकालिक फसल।", "soil": "अच्छी जल निकासी वाली दोमट मिट्टी (pH 6.2 - 7.2)", "care": "60-70 दिनों में पकती है; सफेद मक्खी नियंत्रित कर पीला मोज़ेक वायरस से बचाएं।"},
-        "te": {"name": "పెసలు (Mungbean)", "season": "ఖరీఫ్, రబీ మరియు వేసవి స్వల్పకాలిక పంట.", "soil": "నీరు నిలవని సారవంతమైన నేలలు (pH 6.2 - 7.2)", "care": "తెల్లదోమ నివారణ ద్వారా పసుపు రంగు వైరస్ తెగులు రాకుండా చూసుకోవాలి."}
+        "en": {"name": "Mungbean (Green Gram)", "season": "Can be grown in the rainy season, winter, or summer; it grows quickly.", "soil": "Loamy or sandy loamy soil that drains well (pH 6.2 - 7.2)", "care": "Ready to harvest in 60-70 days. Control whiteflies to help prevent yellow mosaic disease."},
+        "hi": {"name": "मूंग (Mungbean)", "season": "बारिश, सर्दी या गर्मी में उगा सकते हैं; फसल जल्दी तैयार होती है।", "soil": "पानी निकालने वाली दोमट या रेतीली दोमट मिट्टी (pH 6.2 - 7.2)", "care": "फसल 60-70 दिनों में तैयार होती है। पीले मोज़ेक रोग से बचाने के लिए सफेद मक्खी पर काबू रखें।"},
+        "te": {"name": "పెసలు (Mungbean)", "season": "వర్షాకాలం, శీతాకాలం లేదా వేసవిలో సాగు చేయవచ్చు; త్వరగా పంట వస్తుంది.", "soil": "నీరు నిలవని సారవంతమైన నేల (pH 6.2 - 7.2)", "care": "60-70 రోజుల్లో పంట చేతికి వస్తుంది. పసుపు మచ్చల తెగులు రాకుండా తెల్లదోమను అదుపు చేయండి."}
     },
     "muskmelon": {
         "en": {"name": "Muskmelon", "season": "Summer warm season with long sunny days.", "soil": "Sandy loam rich in organic matter (pH 6.0 - 7.5)", "care": "Irrigate regularly until fruit setting, then reduce watering to concentrate sweetness."},
@@ -556,34 +578,34 @@ CROPS_I18N = {
         "te": {"name": "కర్బూజ (Muskmelon)", "season": "వేసవి కాలం అత్యంత అనుకూలం.", "soil": "సేంద్రీయ పదార్థాలు కలిగిన ఇసుక నేలలు (pH 6.0 - 7.5)", "care": "కాయలు ఏర్పడే వరకు తేమ ఉంచాలి, తరువాత తియ్యదనం పెరగడానికి నీరు తగ్గించాలి."}
     },
     "orange": {
-        "en": {"name": "Orange (Citrus)", "season": "Subtropical climate with distinct dry and wet spells.", "soil": "Deep, well-aerated sandy loam with no hardpan (pH 6.0 - 7.5)", "care": "Avoid water contact with the tree trunk; apply zinc and iron micronutrients regularly."},
-        "hi": {"name": "संतरा (Orange / Citrus)", "season": "उपोष्णकटिबंधीय जलवायु, संतुलित शुष्क और आर्द्र मौसम।", "soil": "गहरी और हवादार बलुई दोमट मिट्टी (pH 6.0 - 7.5)", "care": "पेड़ के तने के सीधे संपर्क में पानी न आने दें; जिंक और आयरन का छिड़काव करें।"},
-        "te": {"name": "నారింజ / బత్తాయి (Orange)", "season": "సమశీతోష్ణ మరియు పొడి వాతావరణం.", "soil": "లోతైన గరప లేదా ఎర్ర నేలలు (pH 6.0 - 7.5)", "care": "మొక్క మొదళ్లకు నీరు తగలకుండా పాదులు చేయాలి; జింక్ మరియు ఐరన్ పోషకాలు ఇవ్వాలి."}
+        "en": {"name": "Orange (Citrus)", "season": "Grows best where there are clear rainy and dry periods.", "soil": "Deep sandy loam that drains well and has no hard layer below (pH 6.0 - 7.5)", "care": "Keep water away from the trunk. Give zinc and iron nutrients when needed."},
+        "hi": {"name": "संतरा (Orange / Citrus)", "season": "ऐसे इलाकों में अच्छा उगता है जहां बारिश और सूखा दोनों मौसम आते हैं।", "soil": "गहरी रेतीली दोमट मिट्टी जिसमें हवा और पानी आसानी से आ-जा सके (pH 6.0 - 7.5)", "care": "तने के पास पानी न भरने दें। जरूरत पड़ने पर जिंक और आयरन वाली खाद दें।"},
+        "te": {"name": "నారింజ / బత్తాయి (Orange)", "season": "వర్షం, ఎండ వేరువేరు కాలాల్లో ఉండే ప్రాంతాల్లో బాగా పెరుగుతుంది.", "soil": "లోతైన ఇసుక నేలలో నీరు బాగా బయటకు పోవాలి (pH 6.0 - 7.5)", "care": "చెట్టు మొదల దగ్గర నీరు నిలవనివ్వకండి. అవసరమైనప్పుడు జింక్, ఐరన్ పోషకాలు ఇవ్వండి."}
     },
     "papaya": {
-        "en": {"name": "Papaya", "season": "Tropical frost-free climate, rapid 9-month harvest.", "soil": "Rich loam with superior drainage (pH 6.0 - 7.0)", "care": "Highly vulnerable to water stagnation and collar rot; construct raised beds."},
-        "hi": {"name": "पपीता (Papaya)", "season": "उष्णकटिबंधीय पाला-मुक्त मौसम, 9 महीने में फल तैयार।", "soil": "बेहतर जल निकासी वाली उपजाऊ दोमट मिट्टी (pH 6.0 - 7.0)", "care": "जलभराव और तना गलन के प्रति अत्यधिक संवेदनशील; उठी हुई क्यारियों पर लगाएं।"},
+        "en": {"name": "Papaya", "season": "Grow in warm areas without frost; fruit can be ready in about nine months.", "soil": "Fertile loamy soil that drains well (pH 6.0 - 7.0)", "care": "Standing water can rot the stem near the soil. Plant on raised beds so extra water can drain away."},
+        "hi": {"name": "पपीता (Papaya)", "season": "गर्म, पाले से मुक्त इलाकों में उगाएं; करीब 9 महीने में फल तैयार हो सकते हैं।", "soil": "उपजाऊ दोमट मिट्टी जिसमें पानी न रुके (pH 6.0 - 7.0)", "care": "तने के पास पानी रुकने से सड़न हो सकती है। पानी निकालने के लिए ऊंची क्यारी बनाकर लगाएं।"},
         "te": {"name": "బొప్పాయి (Papaya)", "season": "వేడి వాతావరణం, 9-10 నెలల్లో దిగుబడి ప్రారంభం.", "soil": "మంచి నీటి పారుదల గల సారవంతమైన నేలలు (pH 6.0 - 7.0)", "care": "నీరు నిలిస్తే మొదలు కుళ్లు తెగులు వస్తుంది; ఎత్తైన బోదెలపై నాటాలి."}
     },
     "pigeonpeas": {
-        "en": {"name": "Pigeonpeas (Arhar / Toor)", "season": "Kharif deep-rooted leguminous crop.", "soil": "Deep loamy or clayey loam with good aeration (pH 6.0 - 7.5)", "care": "Intercrop with cereals; ensure drainage; apply phosphorus fertilizer at sowing."},
-        "hi": {"name": "अरहर / तुअर (Pigeonpeas)", "season": "खरीफ मौसम की गहरी जड़ों वाली दलहनी फसल।", "soil": "गहरी दोमट या चिकनी मिट्टी जिसमें हवा का संचार हो (pH 6.0 - 7.5)", "care": "अनाज फसलों के साथ अंतरफसल करें; जल निकास सुनिश्चित करें; बुवाई पर फास्फोरस दें।"},
-        "te": {"name": "కందులు (Pigeonpeas / Toor)", "season": "ఖరీఫ్ కాలం, లోతైన వేరు వ్యవస్థ గల పంట.", "soil": "లోతైన సారవంతమైన నేలలు (pH 6.0 - 7.5)", "care": "అంతర పంటగా సాగు చేయవచ్చు; విత్తే సమయంలో భాస్వరం ఎరువులు తప్పనిసరి."}
+        "en": {"name": "Pigeonpeas (Arhar / Toor)", "season": "Grow during the rainy season; roots grow deep into the soil.", "soil": "Deep loamy or clay loamy soil that drains well (pH 6.0 - 7.5)", "care": "Grow between rows of cereal crops if suitable. Make sure extra water drains away and add phosphorus fertilizer when sowing."},
+        "hi": {"name": "अरहर / तुअर (Pigeonpeas)", "season": "बारिश के मौसम में उगाएं; इसकी जड़ें गहरी जाती हैं।", "soil": "गहरी दोमट या चिकनी मिट्टी जिसमें पानी न रुके (pH 6.0 - 7.5)", "care": "मौका हो तो अनाज की फसल की कतारों के बीच उगाएं। पानी निकलने दें और बुवाई के समय फास्फोरस दें।"},
+        "te": {"name": "కందులు (Pigeonpeas / Toor)", "season": "వర్షాకాలంలో సాగు చేయండి; దీని వేర్లు లోతుగా పెరుగుతాయి.", "soil": "లోతైన సారవంతమైన, నీరు నిలవని నేల (pH 6.0 - 7.5)", "care": "అవకాశముంటే తృణధాన్యాల వరుసల మధ్య సాగు చేయండి. నీరు బయటకు పోయేలా చేసి, విత్తేటప్పుడు భాస్వరం ఎరువు వేయండి."}
     },
     "pomegranate": {
-        "en": {"name": "Pomegranate", "season": "Semi-arid climate; regulated flowering (Bahar treatment).", "soil": "Light loamy to deep alluvial soils, tolerant of salinity (pH 6.5 - 8.0)", "care": "Prune suckers from base; spray against bacterial blight (Telya) and fruit borer."},
-        "hi": {"name": "अनार (Pomegranate)", "season": "अर्ध-शुष्क जलवायु; बहार उपचार द्वारा पुष्पन नियंत्रण।", "soil": "हल्की दोमट से गहरी जलोढ़ मिट्टी, लवणता सहने में सक्षम (pH 6.5 - 8.0)", "care": "जड़ से निकलने वाली शाखाओं को छांटें; तेल्या (बैक्टीरियल ब्लाइट) से बचाव रखें।"},
+        "en": {"name": "Pomegranate", "season": "Grow in areas with little rainfall; flowering can be managed by adjusting watering.", "soil": "Light loamy to deep river-plain soil; can grow in slightly salty soil (pH 6.5 - 8.0)", "care": "Remove shoots growing from the base. Watch for bacterial blight (Telya) and fruit-boring pests."},
+        "hi": {"name": "अनार (Pomegranate)", "season": "कम बारिश वाले इलाकों में उगाएं; पानी घटा-बढ़ाकर फूल आने का समय संभाल सकते हैं।", "soil": "हल्की दोमट से गहरी नदी के मैदान की मिट्टी; थोड़ी खारी मिट्टी में भी उग सकता है (pH 6.5 - 8.0)", "care": "जड़ के पास से निकलने वाली टहनियां काटें। तेल्या रोग और फल में छेद करने वाले कीटों पर नज़र रखें।"},
         "te": {"name": "దానిమ్మ (Pomegranate)", "season": "పొడి మరియు సమశీతోష్ణ ప్రాంతాలు అనుకూలం.", "soil": "తేలికపాటి గరప నేలలు (pH 6.5 - 8.0)", "care": "చెట్టు మొదళ్లలో వచ్చే పిలకలను తొలగించాలి; తెగుళ్ల నివారణకు బోర్డో మిశ్రమం పిచికారీ చేయాలి."}
     },
     "rice": {
-        "en": {"name": "Rice (Paddy)", "season": "Kharif monsoon season in warm, water-abundant plains.", "soil": "Clayey loam or alluvial soils capable of holding water (pH 5.5 - 7.0)", "care": "Maintain 2-5 cm standing water during vegetative stage; apply balanced NPK with zinc sulfate."},
-        "hi": {"name": "धान / चावल (Paddy / Rice)", "season": "खरीफ मानसूनी मौसम, गर्म और प्रचुर पानी वाले क्षेत्र।", "soil": "चिकनी दोमट या जलोढ़ मिट्टी जो पानी रोक सके (pH 5.5 - 7.0)", "care": "विकास अवस्था में 2-5 सेमी पानी खड़ा रखें; जिंक सल्फेट के साथ संतुलित खाद दें।"},
-        "te": {"name": "వరి (Paddy / Rice)", "season": "ఖరీఫ్ మరియు రబీ కాలాలు, సమృద్ధిగా నీరు అవసరం.", "soil": "బంకమన్ను లేదా ఒండ్రు నేలలు (pH 5.5 - 7.0)", "care": "దుబ్బు చేసే దశలో 2-5 సెం.మీ నీరు ఉంచాలి; జింక్ సల్ఫేట్ మరియు యూరియా సమతుల్యంగా వేయాలి."}
+        "en": {"name": "Rice (Paddy)", "season": "Grow in the warm rainy season where water is available.", "soil": "Clayey or river-plain soil that holds water (pH 5.5 - 7.0)", "care": "Keep 2-5 cm of water in the field while plants grow. Use balanced fertilizer and zinc sulfate as advised."},
+        "hi": {"name": "धान / चावल (Paddy / Rice)", "season": "गर्म और पानी वाले इलाकों में बारिश के मौसम में उगाएं।", "soil": "चिकनी या नदी के मैदान की मिट्टी जो पानी रोक सके (pH 5.5 - 7.0)", "care": "फसल बढ़ते समय खेत में 2-5 सेमी पानी रखें। सलाह के अनुसार संतुलित खाद और जिंक सल्फेट दें।"},
+        "te": {"name": "వరి (Paddy / Rice)", "season": "నీరు అందుబాటులో ఉన్న వేడి ప్రాంతాల్లో వర్షాకాలంలో సాగు చేయండి.", "soil": "నీరు నిలిచే బంకమట్టి లేదా నదీ మైదానపు నేల (pH 5.5 - 7.0)", "care": "పంట పెరిగేటప్పుడు పొలంలో 2-5 సెం.మీ నీరు ఉంచండి. సూచనల మేరకు సమతుల్య ఎరువు, జింక్ సల్ఫేట్ వేయండి."}
     },
     "watermelon": {
-        "en": {"name": "Watermelon", "season": "Warm summer season with abundant sun exposure.", "soil": "Sandy loam rich in organic matter with excellent drainage (pH 6.0 - 7.0)", "care": "Mulch beds to conserve moisture and keep fruit clean; taper off watering near harvest."},
-        "hi": {"name": "तरबूज (Watermelon)", "season": "गर्म ग्रीष्मकालीन मौसम, प्रचुर धूप की जरूरत।", "soil": "जीवांश युक्त बलुई दोमट मिट्टी, उत्तम जल निकास (pH 6.0 - 7.0)", "care": "नमी बचाने व फलों को साफ रखने के लिए मल्चिंग करें; कटाई से पूर्व सिंचाई कम करें।"},
-        "te": {"name": "పుచ్చకాయ (Watermelon)", "season": "ఎండ ఎక్కువగా ఉండే వేసవి కాలం.", "soil": "ఇసుకతో కూడిన సారవంతమైన నేలలు (pH 6.0 - 7.0)", "care": "తేమ కోసం మల్చింగ్ షీట్లు వాడాలి; కోతకు వారం ముందు నీటి తడులు తగ్గించాలి."}
+        "en": {"name": "Watermelon", "season": "Grow in warm, sunny summer weather.", "soil": "Fertile sandy loamy soil that drains well (pH 6.0 - 7.0)", "care": "Cover the soil with straw to keep moisture in and fruit clean. Reduce watering as harvest approaches."},
+        "hi": {"name": "तरबूज (Watermelon)", "season": "गर्म और धूप वाले मौसम में, खासकर गर्मियों में उगाएं।", "soil": "उपजाऊ रेतीली दोमट मिट्टी जिसमें पानी न रुके (pH 6.0 - 7.0)", "care": "नमी बचाने और फल साफ रखने के लिए मिट्टी पर भूसा बिछाएं। कटाई पास आने पर पानी कम दें।"},
+        "te": {"name": "పుచ్చకాయ (Watermelon)", "season": "వేడి, ఎండ ఎక్కువగా ఉండే వేసవిలో సాగు చేయండి.", "soil": "సారవంతమైన, నీరు నిలవని ఇసుక నేల (pH 6.0 - 7.0)", "care": "తేమ ఉండటానికి, కాయలు శుభ్రంగా ఉండటానికి నేలపై గడ్డి పరచండి. కోత దగ్గరపడే కొద్దీ నీరు తగ్గించండి."}
     }
 }
 
@@ -594,11 +616,11 @@ DISEASES_I18N = {
             "name": "Apple - Apple Scab",
             "crop": "Apple",
             "status": "Diseased",
-            "cause": "Fungal pathogen Venturia inaequalis. Thrives in cool (13-24°C), wet spring weather with prolonged leaf wetness.",
-            "symptoms": "Olive-green to dark brown velvety circular spots on upper leaf surfaces, progressing to puckered leaves and scabby fruit lesions.",
-            "treatment": "Apply protective fungicides such as Captan, Mancozeb, or Difenoconazole at green tip stage and repeated after rain events.",
-            "organic": "Spray copper hydroxide, liquid sulfur, or neem oil; prune tree canopy to maximize rapid sun drying.",
-            "prevention": "Rake and destroy fallen leaves in autumn to eliminate overwintering spores; plant scab-resistant varieties like Liberty or Honeycrisp."
+            "cause": "Apple scab is caused by the fungus Venturia inaequalis. It spreads in cool (13-24°C), wet spring weather, especially when leaves stay wet for a long time.",
+            "symptoms": "Round olive-green to dark brown spots appear on the upper side of leaves. Leaves may curl, and scabby marks can form on the fruit.",
+            "treatment": "Use disease-control sprays such as Captan, Mancozeb, or Difenoconazole when new buds start to open; repeat after rain as directed on the label.",
+            "organic": "Spray copper hydroxide, liquid sulfur, or neem oil. Trim crowded branches so sunlight can dry the tree.",
+            "prevention": "Collect and destroy fallen leaves in autumn. Plant scab-resistant varieties such as Liberty or Honeycrisp."
         },
         "hi": {
             "name": "सेब - सेब स्कैब (Apple Scab)",
@@ -626,11 +648,11 @@ DISEASES_I18N = {
             "name": "Apple - Black Rot",
             "crop": "Apple",
             "status": "Diseased",
-            "cause": "Fungus Botryosphaeria obtusa. Enters through bark wounds, dead twigs, and insect damage during warm wet conditions.",
-            "symptoms": "Frogeye leaf spots with purple margins and tan centers; trunk cankers; fruit shows firm brown rot expanding in concentric rings.",
-            "treatment": "Apply Captan or Thiophanate-methyl sprays from silver tip through petal fall.",
-            "organic": "Carefully prune out and burn all dead cankered wood and mummified fruits; spray copper octanoate.",
-            "prevention": "Keep trees vigorous with balanced fertilization; sanitize pruning shears between cuts."
+            "cause": "The fungus Botryosphaeria obtusa enters through damaged bark, dead twigs, or insect wounds, especially in warm, wet weather.",
+            "symptoms": "Leaves develop round spots with purple edges and tan centers. The trunk may have damaged areas, and fruit can develop spreading brown rot rings.",
+            "treatment": "Spray Captan or Thiophanate-methyl from the time new leaves appear until the flowers fall, following the product label.",
+            "organic": "Cut off and burn dead or diseased wood and dried fruit. Use copper octanoate spray as directed.",
+            "prevention": "Keep trees healthy with balanced fertilizer. Clean pruning tools between cuts."
         },
         "hi": {
             "name": "सेब - ब्लैक रॉट (Black Rot)",
@@ -658,10 +680,10 @@ DISEASES_I18N = {
             "name": "Apple - Cedar Apple Rust",
             "crop": "Apple",
             "status": "Diseased",
-            "cause": "Gymnosporangium juniperi-virginianae. Requires both Eastern red cedar / juniper and apple trees to complete its life cycle.",
-            "symptoms": "Bright yellow-orange spots on the upper leaf surface, later developing tiny tube-like fungal projections on the underside.",
-            "treatment": "Apply Myclobutanil or Chlorothalonil from cluster bud stage until petal fall.",
-            "organic": "Apply sulfur or copper fungicides in early spring; remove nearby wild cedar/juniper galls within 500 meters.",
+            "cause": "The fungus Gymnosporangium juniperi-virginianae needs both cedar or juniper trees and apple trees to spread.",
+            "symptoms": "Bright yellow-orange spots appear on top of leaves. Later, small tube-like growths may form underneath.",
+            "treatment": "Spray Myclobutanil or Chlorothalonil from the time flower buds gather in clusters until the flowers fall, following the product label.",
+            "organic": "In early spring, use sulfur or copper disease-control spray as directed. Remove swollen, diseased growths from nearby wild cedar or juniper trees, where practical.",
             "prevention": "Plant rust-immune cultivars (e.g., Redfree, Prima); eliminate volunteer junipers near orchards."
         },
         "hi": {
@@ -690,11 +712,11 @@ DISEASES_I18N = {
             "name": "Apple - Healthy",
             "crop": "Apple",
             "status": "Healthy",
-            "cause": "No pathogen detected. Foliage displays optimal chlorophyll density and cellular vigor.",
-            "symptoms": "Clean, smooth, vibrant green leaves without spotting, wilting, or fungal lesions.",
+            "cause": "No disease was found. The leaves look healthy and green.",
+            "symptoms": "The leaves are green, with no spots, drooping, or signs of fungus.",
             "treatment": "No chemical treatment required.",
-            "organic": "Maintain balanced organic fertilization, preventive neem sprays, and consistent drip irrigation.",
-            "prevention": "Regular orchard hygiene, balanced NPK nutrition, and routine scouting."
+            "organic": "Use compost and neem spray when needed. Water the trees regularly.",
+            "prevention": "Keep the orchard clean, use balanced fertilizer, and check trees regularly."
         },
         "hi": {
             "name": "सेब - स्वस्थ (Healthy Apple)",
@@ -722,11 +744,11 @@ DISEASES_I18N = {
             "name": "Bell Pepper - Bacterial Spot",
             "crop": "Bell Pepper",
             "status": "Diseased",
-            "cause": "Bacterium Xanthomonas campestris pv. vesicatoria. Spread via splashing rain, contaminated seeds, and handling wet plants.",
-            "symptoms": "Small, water-soaked, dark brown blistering spots on leaves and fruit, causing severe defoliation and sunscald.",
-            "treatment": "Apply fixed copper bactericides mixed with Mancozeb to enhance bacterial inhibition.",
+            "cause": "The bacterium Xanthomonas campestris pv. vesicatoria spreads through splashing rain, infected seeds, and touching wet plants.",
+            "symptoms": "Small, dark brown, wet-looking raised spots appear on leaves and fruit. Leaves may fall, and fruit can be damaged by strong sun.",
+            "treatment": "Use a copper-based spray mixed with Mancozeb as directed on the product label.",
             "organic": "Spray copper sulfate or Bacillus subtilis bio-formulations; remove diseased plants immediately.",
-            "prevention": "Use hot water-treated certified disease-free seed; avoid overhead sprinkler irrigation; practice 3-year crop rotation."
+            "prevention": "Use certified clean seeds treated with hot water. Water near the soil instead of over the plants, and grow a different crop in the field for three years."
         },
         "hi": {
             "name": "शिमला मिर्च - जीवाणु धब्बा (Bacterial Spot)",
@@ -754,10 +776,10 @@ DISEASES_I18N = {
             "name": "Bell Pepper - Healthy",
             "crop": "Bell Pepper",
             "status": "Healthy",
-            "cause": "No pathogen detected. Vigorous vegetative structure with balanced nutrition.",
+            "cause": "No disease was found. The plant looks strong and healthy.",
             "symptoms": "Uniform deep green leaves, firm stems, and normal blossom development.",
             "treatment": "No treatment required.",
-            "organic": "Maintain mulch cover, foliar seaweed extract sprays, and consistent soil moisture.",
+            "organic": "Cover the soil with plant material and keep it slightly moist. Seaweed spray can also be used on the leaves.",
             "prevention": "Monitor for aphids and mites; provide calcium to prevent blossom end rot."
         },
         "hi": {
@@ -786,8 +808,8 @@ DISEASES_I18N = {
             "name": "Cherry - Healthy",
             "crop": "Cherry",
             "status": "Healthy",
-            "cause": "No pathogen detected. Healthy canopy with robust vascular activity.",
-            "symptoms": "Glossy green leaves free of shot holes, powdery mildew, or yellowing.",
+            "cause": "No disease was found. The tree looks healthy and is growing well.",
+            "symptoms": "The leaves are glossy and green, with no holes, white powder, or yellowing.",
             "treatment": "No treatment required.",
             "organic": "Compost mulch, beneficial insect companion plants, and routine horticultural oils.",
             "prevention": "Ensure good air circulation through summer pruning; avoid trunk water splashing."
@@ -818,11 +840,11 @@ DISEASES_I18N = {
             "name": "Cherry - Powdery Mildew",
             "crop": "Cherry",
             "status": "Diseased",
-            "cause": "Fungus Podosphaera clandestina. Favored by warm days, cool humid nights, and lush shade.",
-            "symptoms": "White talcum powder-like fungal patches on young leaves and fruit stems, leading to curling and crinkling.",
-            "treatment": "Apply myclobutanil, trifloxystrobin, or propiconazole at shuck fall stage.",
+            "cause": "The fungus Podosphaera clandestina spreads more easily after warm days followed by cool, damp nights, especially in shady places.",
+            "symptoms": "White powder-like patches appear on young leaves and fruit stems. Leaves may curl or wrinkle.",
+            "treatment": "Use myclobutanil, trifloxystrobin, or propiconazole spray after the flower coverings fall, following the product label.",
             "organic": "Spray potassium bicarbonate (3g/L), wettable sulfur, or 10% milk-water solution in sunlight.",
-            "prevention": "Prune interior canopy for sunlight penetration; avoid excessive nitrogen fertilizer that spurs overly tender growth."
+            "prevention": "Trim crowded inner branches so sunlight and air can reach the tree. Do not use too much nitrogen fertilizer, as it can make new growth weak."
         },
         "hi": {
             "name": "चेरी - चूर्णिल आसिता (Powdery Mildew)",
@@ -850,11 +872,11 @@ DISEASES_I18N = {
             "name": "Corn (Maize) - Cercospora Leaf Spot (Gray Leaf Spot)",
             "crop": "Maize",
             "status": "Diseased",
-            "cause": "Fungus Cercospora zeae-maydis. Prospers in humid weather (>90% RH) with warm temperatures (25-30°C).",
-            "symptoms": "Rectangular, tan-to-gray lesions restricted by leaf veins, expanding parallel along leaf length.",
-            "treatment": "Foliar fungicide application with Pyraclostrobin, Azoxystrobin, or Propiconazole at tasseling stage.",
-            "organic": "Rotate with non-host crops like legumes; spray bio-fungicide Trichoderma viride.",
-            "prevention": "Till under infected crop residue to accelerate fungal decomposition; choose resistant corn hybrids."
+            "cause": "The fungus Cercospora zeae-maydis spreads in warm weather (25-30°C) when the air is very humid (over 90%).",
+            "symptoms": "Long, rectangular tan or gray marks appear between the leaf veins and grow along the leaf.",
+            "treatment": "When tassels begin to appear, use a disease-control spray containing Pyraclostrobin, Azoxystrobin, or Propiconazole, following its label.",
+            "organic": "Rotate maize with crops such as pulses. A Trichoderma viride spray may also help; follow its label.",
+            "prevention": "Turn infected plant remains into the soil so they break down. Choose maize varieties that can withstand this disease."
         },
         "hi": {
             "name": "मक्का - सर्कोस्पोरा पत्ती धब्बा (Gray Leaf Spot)",
@@ -882,11 +904,11 @@ DISEASES_I18N = {
             "name": "Corn (Maize) - Common Rust",
             "crop": "Maize",
             "status": "Diseased",
-            "cause": "Fungus Puccinia sorghi. Airborne urediniospores spread over vast distances in moderate temps (16-25°C).",
+            "cause": "The fungus Puccinia sorghi causes this disease. Wind carries it from plant to plant in mild weather (16-25°C).",
             "symptoms": "Golden-brown to cinnamon-colored powdery pustules scattered on both upper and lower leaf surfaces.",
-            "treatment": "Apply Mancozeb, Azoxystrobin, or Tebuconazole if rust appears prior to tasseling stage.",
-            "organic": "Foliar spray with neem cake extract or sulfur dust; encourage biocontrol with Bacillus subtilis.",
-            "prevention": "Plant rust-resistant hybrids bearing the Rp gene; early season planting."
+            "treatment": "If rust appears before tassels form, use Mancozeb, Azoxystrobin, or Tebuconazole as directed on the label.",
+            "organic": "Spray neem cake extract or sulfur dust on the leaves. Bacillus subtilis may also help limit the fungus.",
+            "prevention": "Plant maize varieties that can withstand rust and sow early in the season."
         },
         "hi": {
             "name": "मक्का - सामान्य रतुआ / रस्ट (Common Rust)",
@@ -914,7 +936,7 @@ DISEASES_I18N = {
             "name": "Corn (Maize) - Healthy",
             "crop": "Maize",
             "status": "Healthy",
-            "cause": "No pathogen detected. Vigorous vegetative growth with strong stalk and clean green leaf blades.",
+            "cause": "No disease was found. The plant is strong, with clean green leaves.",
             "symptoms": "Broad, vibrant green leaves with crisp edges and no discoloration or pustules.",
             "treatment": "No treatment required.",
             "organic": "Side-dress with vermicompost; apply seaweed extract during knee-high stage.",
@@ -946,10 +968,10 @@ DISEASES_I18N = {
             "name": "Corn (Maize) - Northern Leaf Blight",
             "crop": "Maize",
             "status": "Diseased",
-            "cause": "Fungus Exserohilum turcicum. Thrives in cool to moderate temperatures (18-27°C) and heavy dew.",
-            "symptoms": "Long, cigar-shaped, grayish-green to tan lesions (2 to 15 cm long) beginning on lower leaves.",
-            "treatment": "Apply foliar sprays of Azoxystrobin + Difenoconazole or Mancozeb at early onset.",
-            "organic": "Crop rotation with legumes or oilseeds; foliar application of Trichoderma harzianum.",
+            "cause": "The fungus Exserohilum turcicum spreads in cool to mild weather (18-27°C), especially when there is heavy dew.",
+            "symptoms": "Long gray-green or tan marks, about 2 to 15 cm long, start on the lower leaves.",
+            "treatment": "At the first signs, spray Azoxystrobin with Difenoconazole, or Mancozeb, following the product label.",
+            "organic": "Grow legumes or oilseed crops in rotation. Trichoderma harzianum can also be sprayed on leaves.",
             "prevention": "Plant resistant hybrids; plow down previous crop residue deep into the soil."
         },
         "hi": {
@@ -978,11 +1000,11 @@ DISEASES_I18N = {
             "name": "Grape - Black Rot",
             "crop": "Grape",
             "status": "Diseased",
-            "cause": "Fungus Guignardia bidwellii. Spread by rain splash during warm, wet spring weather.",
-            "symptoms": "Reddish-brown circular spots on leaves with black fruiting specks; berries shrivel into black, wrinkled mummies.",
-            "treatment": "Apply Mancozeb, Myclobutanil, or Kresoxim-methyl from bud break to 4 weeks post-bloom.",
-            "organic": "Remove all mummified fruit clusters during winter; apply copper hydroxide or lime-sulfur during dormancy.",
-            "prevention": "Prune for open trellis canopy to accelerate drying; destroy vineyard floor debris."
+            "cause": "The fungus Guignardia bidwellii spreads when rain splashes it onto grapevines during warm, wet spring weather.",
+            "symptoms": "Round reddish-brown spots and tiny black specks appear on leaves. Grapes may shrivel, turn black, and dry out.",
+            "treatment": "Spray Mancozeb, Myclobutanil, or Kresoxim-methyl from the time buds open until four weeks after flowering, following the product label.",
+            "organic": "Remove and destroy dried grape clusters in winter. Use copper hydroxide or lime-sulfur spray while vines are resting.",
+            "prevention": "Trim crowded vines so they dry faster. Clear fallen leaves and other plant waste from the ground."
         },
         "hi": {
             "name": "अंगूर - ब्लैक रॉट (Grape Black Rot)",
@@ -1010,11 +1032,11 @@ DISEASES_I18N = {
             "name": "Grape - Esca (Black Measles)",
             "crop": "Grape",
             "status": "Diseased",
-            "cause": "Complex of wood-rotting fungi (Phaeoacremonium, Fomitiporia). Enters through large pruning cuts.",
-            "symptoms": "'Tiger-stripe' interveinal chlorosis and necrosis on leaves; dark purple spotting on berries; sudden vine apoplexy.",
-            "treatment": "No curative chemical exists. Protect fresh pruning cuts immediately with pruning wound sealant containing tebuconazole.",
-            "organic": "Apply Trichoderma-based pruning wound paste; avoid pruning during wet rainy conditions.",
-            "prevention": "Sanitize pruning tools with 10% bleach between vines; remove and burn dead diseased vines."
+            "cause": "This disease is caused by wood-rotting fungi, including Phaeoacremonium and Fomitiporia. They can enter through large cuts made when pruning.",
+            "symptoms": "Leaves develop yellow and brown stripes between their veins. Grapes may get dark purple spots, and a vine can suddenly wilt and die.",
+            "treatment": "There is no chemical cure. Protect fresh pruning cuts with a wound sealant containing tebuconazole.",
+            "organic": "Use pruning wound paste containing Trichoderma. Do not prune in wet or rainy weather.",
+            "prevention": "Clean pruning tools with 10% bleach before using them on another vine. Remove and burn dead, diseased vines."
         },
         "hi": {
             "name": "अंगूर - एस्का / ब्लैक मीजल्स (Esca)",
@@ -1042,11 +1064,11 @@ DISEASES_I18N = {
             "name": "Grape - Healthy",
             "crop": "Grape",
             "status": "Healthy",
-            "cause": "No pathogen detected. Vigorous vine canopy with active tendril growth and clean foliage.",
-            "symptoms": "Lush green lobed leaves with intact margins and smooth surfaces.",
+            "cause": "No disease was found. The vine is growing well, with clean leaves and healthy tendrils.",
+            "symptoms": "The leaves are green and smooth, with no damaged edges.",
             "treatment": "No chemical treatment required.",
-            "organic": "Maintain regular canopy management, organic compost, and preventive potassium silicate sprays.",
-            "prevention": "Routine preventive scouting; balanced drip fertigation."
+            "organic": "Trim the vines regularly, add compost, and use potassium silicate spray as directed.",
+            "prevention": "Check vines regularly for signs of disease. Give balanced fertilizer and water the roots regularly."
         },
         "hi": {
             "name": "अंगूर - स्वस्थ (Healthy Grape)",
@@ -1074,11 +1096,11 @@ DISEASES_I18N = {
             "name": "Grape - Leaf Blight (Isariopsis Clavispora)",
             "crop": "Grape",
             "status": "Diseased",
-            "cause": "Fungus Pseudocercospora vitis / Isariopsis. Favored by warm, moist tropical and subtropical conditions late in the season.",
-            "symptoms": "Irregular large dark reddish-brown blotches on leaves that dry out, turn brittle, and cause premature defoliation.",
+            "cause": "The fungi Pseudocercospora vitis and Isariopsis spread in warm, damp weather late in the growing season.",
+            "symptoms": "Large, uneven dark reddish-brown spots appear on leaves. The leaves dry, become brittle, and may fall early.",
             "treatment": "Spray Carbendazim, Mancozeb, or Pyraclostrobin upon early symptom appearance.",
-            "organic": "Foliar spray of 1% Bordeaux mixture or copper oxychloride; remove heavily blighted leaves.",
-            "prevention": "Improve airflow within the canopy; avoid overhead irrigation; clean fallen leaves."
+            "organic": "Spray 1% Bordeaux mixture or copper oxychloride on the leaves. Remove badly affected leaves.",
+            "prevention": "Trim crowded branches so air can pass through. Do not spray water over the leaves, and clear away fallen leaves."
         },
         "hi": {
             "name": "अंगूर - पत्ती झुलसा (Leaf Blight)",
@@ -1138,10 +1160,10 @@ DISEASES_I18N = {
             "name": "Peach - Healthy",
             "crop": "Peach",
             "status": "Healthy",
-            "cause": "No pathogen detected. Vigorous shoot growth with healthy linear foliage.",
-            "symptoms": "Long, glossy lanceolate leaves with serrated margins and vibrant green color.",
+            "cause": "No disease was found. The plant has healthy new shoots and clean leaves.",
+            "symptoms": "The leaves are long and shiny, with toothed edges and a bright green color.",
             "treatment": "No treatment required.",
-            "organic": "Balanced compost tea, trunk white-washing against sunscald, and organic mulching.",
+            "organic": "Use compost tea, paint the trunk white to protect it from strong sun, and cover the soil with natural material.",
             "prevention": "Scout for peach tree borers and oriental fruit moth; maintain uniform watering."
         },
         "hi": {
@@ -1170,11 +1192,11 @@ DISEASES_I18N = {
             "name": "Potato - Early Blight",
             "crop": "Potato",
             "status": "Diseased",
-            "cause": "Fungus Alternaria solani. Favored by warm temperatures (24-29°C) and alternating wet and dry periods.",
-            "symptoms": "Dark brown circular spots with distinct concentric rings ('target-board' pattern) on older leaves, surrounded by yellow chlorotic halos.",
-            "treatment": "Apply Chlorothalonil, Mancozeb, or Azoxystrobin every 7-10 days under disease pressure.",
-            "organic": "Spray copper hydroxide or Bacillus amyloliquefaciens; strip lower infected leaves.",
-            "prevention": "Practice 3-year rotation with non-solanaceous crops; maintain optimal plant vigor with balanced nitrogen."
+            "cause": "The fungus Alternaria solani spreads in warm weather (24-29°C), especially when wet and dry periods alternate.",
+            "symptoms": "Older leaves develop round dark-brown spots with rings like a target and a yellow edge.",
+            "treatment": "When the disease is spreading, use Chlorothalonil, Mancozeb, or Azoxystrobin spray every 7-10 days, following the product label.",
+            "organic": "Spray copper hydroxide or Bacillus amyloliquefaciens as directed. Remove affected lower leaves.",
+            "prevention": "For three years, grow crops other than potato, tomato, pepper, or eggplant in this field. Keep plants healthy with balanced fertilizer."
         },
         "hi": {
             "name": "आलू - अगेती झुलसा (Potato Early Blight)",
@@ -1202,11 +1224,11 @@ DISEASES_I18N = {
             "name": "Potato - Healthy",
             "crop": "Potato",
             "status": "Healthy",
-            "cause": "No pathogen detected. Vigorous tuberizing canopy with rich dark foliage.",
-            "symptoms": "Even dark green compound leaves, firm upright haulms, and clean foliage.",
+            "cause": "No disease was found. The plant looks strong and its leaves are a healthy dark green.",
+            "symptoms": "The leaves are evenly dark green, the stems stand upright, and the plant is clean.",
             "treatment": "No treatment required.",
-            "organic": "Hill up soil around stems; apply compost and neem cake to boost immunity.",
-            "prevention": "Maintain consistent hilling to shield tubers from sunlight; monitor for Colorado potato beetle."
+            "organic": "Pile soil around the stems and add compost or neem cake.",
+            "prevention": "Keep soil around the stems to cover the potatoes and protect them from sunlight. Check for Colorado potato beetles."
         },
         "hi": {
             "name": "आलू - स्वस्थ (Healthy Potato)",
@@ -1234,11 +1256,11 @@ DISEASES_I18N = {
             "name": "Potato - Late Blight",
             "crop": "Potato",
             "status": "Diseased",
-            "cause": "Oomycete Phytophthora infestans. Catastrophic water mold favored by cool (10-21°C), damp, foggy weather with continuous leaf wetness.",
-            "symptoms": "Rapidly expanding water-soaked dark lesions on leaf tips/margins, with white velvety fungal growth on the underside during humid mornings.",
-            "treatment": "Apply systemic fungicides like Metalaxyl-Mancozeb, Cymoxanil, or Dimethomorph immediately upon first warning.",
+            "cause": "Phytophthora infestans, a fungus-like organism, causes this disease. It spreads quickly in cool (10-21°C), damp, foggy weather when leaves stay wet.",
+            "symptoms": "Dark, wet-looking marks spread from leaf tips and edges. In humid mornings, a white fuzzy growth may appear underneath the leaves.",
+            "treatment": "At the first signs, use a disease-control spray containing Metalaxyl-Mancozeb, Cymoxanil, or Dimethomorph, following the product label.",
             "organic": "Preventive copper sulfate sprays (Bordeaux mixture); destroy infected cull piles; harvest only during dry weather.",
-            "prevention": "Plant certified late-blight-resistant seed tubers; avoid overhead irrigation; destroy volunteer potato plants."
+            "prevention": "Plant certified seed potatoes that can withstand late blight. Water near the soil, not over the leaves, and remove potato plants that grow from leftover tubers."
         },
         "hi": {
             "name": "आलू - पछेती झुलसा (Potato Late Blight)",
@@ -1266,11 +1288,11 @@ DISEASES_I18N = {
             "name": "Strawberry - Healthy",
             "crop": "Strawberry",
             "status": "Healthy",
-            "cause": "No pathogen detected. Vigorous trifoliate foliage with balanced crown development.",
-            "symptoms": "Bright glossy green trifoliate leaves with serrated margins and no leaf spotting.",
+            "cause": "No disease was found. The plant is growing well and its leaves look healthy.",
+            "symptoms": "The leaves are glossy green and grow in groups of three, with toothed edges and no spots.",
             "treatment": "No treatment required.",
-            "organic": "Pine needle or straw mulching, compost tea, and biofertilizers.",
-            "prevention": "Ensure bed renovation after harvest; maintain drip irrigation under plastic mulch."
+            "organic": "Cover the soil with pine needles or straw, and use compost tea or natural fertilizers.",
+            "prevention": "After harvest, clear and renew the growing bed. Water near the plants and keep the plastic soil cover in place."
         },
         "hi": {
             "name": "स्ट्रॉबेरी - स्वस्थ (Healthy Strawberry)",
@@ -1289,7 +1311,7 @@ DISEASES_I18N = {
             "cause": "ఎటువంటి తెగులు లేదు.",
             "symptoms": "ఆకులు ఎటువంటి మచ్చలు లేకుండా పచ్చగా, కాంతివంతంగా ఉన్నాయి.",
             "treatment": "మందులు అవసరం లేదు.",
-            "organic": "గడ్డితో మల్చింగ్ చేయాలి.",
+            "organic": "నేలపై గడ్డి పరచండి.",
             "prevention": "డ్రిప్ పద్ధతిలో నీరు అందిస్తూ ఆకులు తడవకుండా చూడాలి."
         }
     },
@@ -1298,9 +1320,9 @@ DISEASES_I18N = {
             "name": "Strawberry - Leaf Scorch",
             "crop": "Strawberry",
             "status": "Diseased",
-            "cause": "Fungus Diplocarpon earlianum. Spread through splashing rain and favored by extended leaf wetness.",
-            "symptoms": "Numerous small, irregular purple to dark brownish blotches that coalesce until the entire leaf turns brown, curls upward, and scorches.",
-            "treatment": "Apply protective fungicides like Captan, Thiophanate-methyl, or Pyraclostrobin.",
+            "cause": "The fungus Diplocarpon earlianum spreads in rain splashes and when leaves stay wet for a long time.",
+            "symptoms": "Many small purple or dark-brown spots join together. The leaf may turn brown, curl up, and dry out.",
+            "treatment": "Use a disease-control spray containing Captan, Thiophanate-methyl, or Pyraclostrobin, following the product label.",
             "organic": "Mow and bury old leaves after harvest; spray copper soap or potassium bicarbonate.",
             "prevention": "Space plants generously on raised beds; remove old infected foliage; use drip tape under mulch."
         },
@@ -1332,8 +1354,8 @@ DISEASES_I18N = {
             "status": "Diseased",
             "cause": "Bacterium Xanthomonas vesicatoria. Survives in crop debris and seed; spreads via rain splash and touching wet foliage.",
             "symptoms": "Small, dark, greasy water-soaked spots with yellow halos on leaves; raised, scabby circular spots on green fruit.",
-            "treatment": "Apply preventive copper bactericide tank-mixed with Mancozeb.",
-            "organic": "Foliar application of Bacillus subtilis or copper hydroxide; prune lower suckers for ventilation.",
+            "treatment": "Use a copper-based spray mixed with Mancozeb as directed on the product label.",
+            "organic": "Spray Bacillus subtilis or copper hydroxide on the leaves. Trim low shoots to let air pass through.",
             "prevention": "Use certified hot water-treated seed; stake plants; practice 3-year crop rotation avoiding all nightshades."
         },
         "hi": {
@@ -1362,10 +1384,10 @@ DISEASES_I18N = {
             "name": "Tomato - Early Blight",
             "crop": "Tomato",
             "status": "Diseased",
-            "cause": "Fungus Alternaria solani. Survives in soil and old solanaceous residue; spreads under warm, wet weather.",
-            "symptoms": "Concentric ring 'target' spots on lower, older leaves, accompanied by surrounding chlorosis and premature leaf drop.",
+            "cause": "The fungus Alternaria solani can remain in soil and old crop waste. It spreads in warm, wet weather.",
+            "symptoms": "Older lower leaves develop round, ringed spots with a yellow edge and may fall early.",
             "treatment": "Apply Chlorothalonil, Mancozeb, or Azoxystrobin every 7 to 14 days.",
-            "organic": "Mulch soil surface with straw or black plastic to stop soil splash; spray copper fungicide or neem oil.",
+            "organic": "Cover the soil with straw or black plastic to stop soil splashing onto plants. Use copper spray or neem oil as directed.",
             "prevention": "Prune bottom 12 inches of foliage; stake tomatoes for airflow; rotate crops annually."
         },
         "hi": {
@@ -1385,7 +1407,7 @@ DISEASES_I18N = {
             "cause": "ఆల్టర్నేరియా సోలాని శిలీంధ్రం వల్ల వస్తుంది. నేలలోని తేమ ద్వారా వ్యాపిస్తుంది.",
             "symptoms": "కింది ఆకులపై వలయాకార మచ్చలు ఏర్పడి ఆకులు పసుపు రంగులోకి మారి రాలిపోతాయి.",
             "treatment": "క్లోరోథలోనిల్ లేదా మాంకోజెబ్ మందును పిచికారీ చేయాలి.",
-            "organic": "నేలపై మల్చింగ్ షీట్ లేదా గడ్డి పరచాలి; వేపనూనె పిచికారీ చేయాలి.",
+            "organic": "నేలపై ప్లాస్టిక్ కవర్ లేదా గడ్డి పరచండి; వేపనూనె పిచికారీ చేయండి.",
             "prevention": "కింది భాగంలోని ఆకులను కత్తిరించాలి; కర్రల సహాయంతో మొక్కలను నిలబెట్టాలి."
         }
     },
@@ -1394,8 +1416,8 @@ DISEASES_I18N = {
             "name": "Tomato - Healthy",
             "crop": "Tomato",
             "status": "Healthy",
-            "cause": "No pathogen detected. Vigorous plant architecture with vibrant green foliage and stout stems.",
-            "symptoms": "Clean, fragrant compound leaves without spotting, curling, mosaic patterns, or blight lesions.",
+            "cause": "No disease was found. The plant is strong, with green leaves and sturdy stems.",
+            "symptoms": "The leaves are clean and green, with no spots, curling, patchy patterns, or signs of blight.",
             "treatment": "No chemical treatment required.",
             "organic": "Maintain regular watering, organic compost, calcium-rich soil amendments to prevent blossom end rot.",
             "prevention": "Scout for whiteflies, hornworms, and spider mites; stake and prune regularly."
@@ -1426,10 +1448,10 @@ DISEASES_I18N = {
             "name": "Tomato - Late Blight",
             "crop": "Tomato",
             "status": "Diseased",
-            "cause": "Phytophthora infestans. Devastating water mold that spreads during cool, wet, cloudy, rainy periods.",
-            "symptoms": "Rapidly spreading greasy, dark water-soaked lesions on leaves and stems; white fuzzy mold on underside; brown greasy rot on fruits.",
+            "cause": "Phytophthora infestans, a fungus-like organism, causes this disease. It spreads quickly in cool, wet, cloudy weather.",
+            "symptoms": "Dark, wet-looking marks spread quickly on leaves and stems. White fuzzy growth may appear underneath leaves, and fruit may develop soft brown rot.",
             "treatment": "Apply Cymoxanil, Dimethomorph, or Metalaxyl-Mancozeb immediately at first sign.",
-            "organic": "Apply copper sulfate (Bordeaux mixture); immediately uproot and bag severely blighted plants to stop spore drift.",
+            "organic": "Use copper sulfate (Bordeaux mixture) as directed. Remove badly affected plants, place them in a bag, and dispose of them away from the field.",
             "prevention": "Plant late-blight-resistant varieties (e.g., Defiant, Mountain Merit); do not overhead irrigate."
         },
         "hi": {
@@ -1458,10 +1480,10 @@ DISEASES_I18N = {
             "name": "Tomato - Septoria Leaf Spot",
             "crop": "Tomato",
             "status": "Diseased",
-            "cause": "Fungus Septoria lycopersici. Overwinters on weed hosts (horsenettle) and tomato residue; spreads via rain splashes.",
+            "cause": "The fungus Septoria lycopersici can live on horsenettle weeds and old tomato plants, then spread in rain splashes.",
             "symptoms": "Numerous small circular spots (1-3 mm) with dark brown borders and light gray/tan centers speckled with tiny black fruiting bodies.",
             "treatment": "Apply Chlorothalonil or Mancozeb sprays beginning at early fruit cluster formation.",
-            "organic": "Prune out affected lower leaves; spray liquid copper fungicide; mulch around plant base.",
+            "organic": "Remove affected lower leaves. Use liquid copper spray as directed and cover the soil around the plant.",
             "prevention": "Avoid handling wet tomato foliage; practice strict weed control around plots; 2-year crop rotation."
         },
         "hi": {
@@ -1490,9 +1512,9 @@ DISEASES_I18N = {
             "name": "Tomato - Yellow Leaf Curl Virus",
             "crop": "Tomato",
             "status": "Diseased",
-            "cause": "Begomovirus (TYLCV). Exclusively transmitted by the silverleaf whitefly (Bemisia tabaci).",
-            "symptoms": "Severe upward leaf curling, yellowing of leaf margins, thick leathery texture, severe plant stunting, and flower abortion.",
-            "treatment": "No cure for viral infection. Immediately control the whitefly vector using Imidacloprid, Acetamiprid, or Spirotetramat.",
+            "cause": "Tomato yellow leaf curl virus (TYLCV) spreads from plant to plant through silverleaf whiteflies (Bemisia tabaci).",
+            "symptoms": "Leaves curl upward, turn yellow at the edges, and become thick. Plants stay small and flowers may fall off.",
+            "treatment": "There is no cure for the virus. Control whiteflies with Imidacloprid, Acetamiprid, or Spirotetramat, following the product label.",
             "organic": "Install yellow sticky cards; spray neem oil (10,000 ppm) or insecticidal soap; remove and bag infected plants.",
             "prevention": "Use 50-mesh insect-proof netting in nurseries; grow resistant tomato varieties (e.g., Tygress, Grandela)."
         },
@@ -1522,7 +1544,7 @@ DISEASES_I18N = {
             "name": "Blueberry - Healthy",
             "crop": "Blueberry",
             "status": "Healthy",
-            "cause": "No pathogen detected. The foliage shows normal physiological condition.",
+            "cause": "No disease was found. The leaves look normal and healthy.",
             "symptoms": "Vibrant foliage, robust shoots, normal leaf turgor and color.",
             "treatment": "No treatment required. Maintain acidic soil (pH 4.5-5.5) and adequate pine bark or peat mulch.",
             "organic": "Compost with ericaceous mulch, rainwater irrigation.",
@@ -1554,9 +1576,9 @@ DISEASES_I18N = {
             "name": "Orange - Huanglongbing (Citrus Greening)",
             "crop": "Orange",
             "status": "Diseased",
-            "cause": "Bacterium Candidatus Liberibacter asiaticus, vectored by Asian citrus psyllid (Diaphorina citri).",
-            "symptoms": "Blotchy mottle yellowing across leaf veins, small lopsided bitter fruits remaining green at base, twig dieback.",
-            "treatment": "No cure once infected. Aggressively manage psyllid vectors using Thiamethoxam or Imidacloprid.",
+            "cause": "The bacterium Candidatus Liberibacter asiaticus spreads through the Asian citrus psyllid insect (Diaphorina citri).",
+            "symptoms": "Leaves show uneven yellow patches. Fruits may be small, lopsided, and bitter, with green color at the base. Twigs may die back.",
+            "treatment": "There is no cure once a tree is infected. Control Asian citrus psyllid insects using Thiamethoxam or Imidacloprid as directed on the label.",
             "organic": "Remove and destroy infected trees immediately; spray horticultural mineral oils; release Tamarixia radiata parasitoid wasps.",
             "prevention": "Plant certified disease-free nursery stock and establish protective windbreaks."
         },
@@ -1586,11 +1608,11 @@ DISEASES_I18N = {
             "name": "Raspberry - Healthy",
             "crop": "Raspberry",
             "status": "Healthy",
-            "cause": "No pathogen detected. Vigorous vegetative growth.",
-            "symptoms": "Deep green leaves, strong cane development, no cane lesions or leaf discoloration.",
-            "treatment": "No treatment needed. Maintain trellis support and balanced watering.",
+            "cause": "No disease was found. The plant is growing well.",
+            "symptoms": "The leaves are deep green and the stems are strong, with no marks or color changes.",
+            "treatment": "No treatment needed. Support the canes and water regularly.",
             "organic": "Apply composted wood chips, ensure good air circulation.",
-            "prevention": "Prune floricanes after harvest."
+            "prevention": "After harvest, cut out the canes that have already produced fruit."
         },
         "hi": {
             "name": "रास्पबेरी - स्वस्थ (Healthy)",
@@ -1618,10 +1640,10 @@ DISEASES_I18N = {
             "name": "Soybean - Healthy",
             "crop": "Soybean",
             "status": "Healthy",
-            "cause": "No pathogen detected. Crop is thriving.",
-            "symptoms": "Uniform trifoliate foliage, vigorous growth, healthy nodulation.",
+            "cause": "No disease was found. The crop looks healthy and is growing well.",
+            "symptoms": "The leaves grow in groups of three and the plant is growing well, with healthy-looking roots.",
             "treatment": "No treatment needed.",
-            "organic": "Rhizobium biofertilizer inoculation.",
+            "organic": "Treat seeds with Rhizobium culture before planting.",
             "prevention": "Rotate with corn or grasses."
         },
         "hi": {
@@ -1650,7 +1672,7 @@ DISEASES_I18N = {
             "name": "Squash - Powdery Mildew",
             "crop": "Squash",
             "status": "Diseased",
-            "cause": "Fungus Podosphaera xanthii. Flourishes in warm, dry weather with dense canopy shading.",
+            "cause": "The fungus Podosphaera xanthii causes this disease. It spreads in warm, dry weather when plants are crowded and shaded.",
             "symptoms": "White talcum-powder-like fungal patches on upper and lower leaf surfaces, leading to yellowing and premature drying.",
             "treatment": "Apply Azoxystrobin, Triflumizole, or Myclobutanil at first sign of white spots.",
             "organic": "Spray potassium bicarbonate (3g/L), diluted milk spray (40% milk, 60% water), or neem oil.",
@@ -1682,10 +1704,10 @@ DISEASES_I18N = {
             "name": "Tomato - Leaf Mold",
             "crop": "Tomato",
             "status": "Diseased",
-            "cause": "Fungus Passalora fulva (Cladosporium fulvum). Highly prevalent in high-humidity (>85%) greenhouse conditions.",
+            "cause": "The fungus Passalora fulva (Cladosporium fulvum) causes this disease. It spreads easily in very humid greenhouses (over 85% humidity).",
             "symptoms": "Pale green to yellowish spots on upper leaf surfaces, with olive-green to grayish velvety mold on the undersides.",
             "treatment": "Apply Chlorothalonil, Mancozeb, or Copper sulfate at early symptoms.",
-            "organic": "Spray biofungicides containing Bacillus amyloliquefaciens; drastically improve greenhouse ventilation.",
+            "organic": "Use a leaf spray containing Bacillus amyloliquefaciens as directed. Let more fresh air into the greenhouse.",
             "prevention": "Maintain relative humidity below 80% and avoid overhead watering."
         },
         "hi": {
@@ -1746,11 +1768,11 @@ DISEASES_I18N = {
             "name": "Tomato - Target Spot",
             "crop": "Tomato",
             "status": "Diseased",
-            "cause": "Fungus Corynespora cassiicola. Thrives in warm, humid tropical and subtropical climates.",
-            "symptoms": "Small pinpoint brown spots on foliage enlarging into concentric circular lesions resembling a bullseye/target.",
+            "cause": "The fungus Corynespora cassiicola spreads in warm, humid weather in tropical and subtropical areas.",
+            "symptoms": "Small brown spots appear on the leaves and grow into rings like a target.",
             "treatment": "Apply Azoxystrobin + Difenoconazole or Boscalid + Pyraclostrobin.",
-            "organic": "Spray copper hydroxide or Bacillus subtilis bio-fungicide; remove lower infected leaves.",
-            "prevention": "Maintain wide row spacing to promote canopy drying; avoid overhead irrigation."
+            "organic": "Spray copper hydroxide or Bacillus subtilis on the leaves as directed. Remove affected lower leaves.",
+            "prevention": "Leave enough space between rows so plants dry after rain. Avoid watering from above."
         },
         "hi": {
             "name": "टमाटर - टारगेट स्पॉट (Target Spot)",
@@ -1778,11 +1800,11 @@ DISEASES_I18N = {
             "name": "Tomato - Tomato Mosaic Virus",
             "crop": "Tomato",
             "status": "Diseased",
-            "cause": "Tobamovirus (ToMV). Extremely stable mechanically transmitted virus via hands, tools, and infected seeds.",
-            "symptoms": "Mottling with alternating light green and dark green mosaic patterns on foliage, distorted 'shoestring' leaves.",
-            "treatment": "No cure for viral disease. Disinfect all tools with 20% nonfat dry milk or 10% trisodium phosphate (TSP).",
+            "cause": "Tomato mosaic virus (ToMV) can remain on hands and tools and spread through touch or infected seeds.",
+            "symptoms": "Leaves show a mix of light and dark green patches and may become narrow or misshapen.",
+            "treatment": "There is no cure for the virus. Clean tools with 20% skim milk or 10% trisodium phosphate (TSP) before using them on healthy plants.",
             "organic": "Immediately rogue and burn infected plants; wash hands thoroughly before touching healthy plants.",
-            "prevention": "Use certified virus-free seed; avoid tobacco use near plants; plant resistant hybrid varieties."
+            "prevention": "Use certified virus-free seeds and tomato varieties that can withstand the disease. Do not handle plants after using tobacco unless you have washed your hands."
         },
         "hi": {
             "name": "टमाटर - मोजेक वायरस (Tomato Mosaic Virus)",
@@ -1824,14 +1846,14 @@ def get_crop_translation(crop_name: str, lang: str = "en") -> dict:
             "name": crop_name.title(),
             "season": "Season data not available.",
             "soil": "Soil data not available.",
-            "care": "Provide regular care, balanced NPK nutrients, and appropriate irrigation."
+            "care": "Water regularly and use a balanced fertilizer."
         }
     
     return crop_info.get(lang, crop_info.get("en", {
         "name": crop_name.title(),
         "season": "Season data not available.",
         "soil": "Soil data not available.",
-        "care": "Provide regular care, balanced NPK nutrients, and appropriate irrigation."
+        "care": "Water regularly and use a balanced fertilizer."
     }))
 
 
@@ -1852,11 +1874,11 @@ def get_disease_translation(disease_name: str, lang: str = "en") -> dict:
             "name": disease_name,
             "crop": disease_name.split(" - ")[0] if " - " in disease_name else "Plant",
             "status": "Healthy" if is_healthy else "Diseased",
-            "cause": "No pathogen detected." if is_healthy else "Pathogen information pending confirmation.",
+            "cause": "No disease was found." if is_healthy else "The cause of the disease has not yet been confirmed.",
             "symptoms": "Clean foliage." if is_healthy else "Visible leaf abnormalities observed.",
             "treatment": "No treatment required." if is_healthy else "Consult local agricultural extension.",
             "organic": "Maintain balanced organic nutrition." if is_healthy else "Use neem-based bio-pesticide.",
-            "prevention": "Regular scouting and balanced fertilization."
+            "prevention": "Check plants regularly and use balanced fertilizer."
         }
         
     return disease_info.get(lang, disease_info.get("en", {}))

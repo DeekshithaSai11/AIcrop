@@ -71,7 +71,7 @@
                             <tbody>
                                 {% for item in recent_crops %}
                                 <tr>
-                                    <td>{{ item.created_at.strftime('%Y-%m-%d %H:%M') if item.created_at else 'Recent' }}</td>
+                                    <td>{{ item.created_at_ist or 'Recent' }}</td>
                                     <td>
                                         <span class="fw-bold text-light">{{ item.localized_crop or item.recommended_crop }}</span>
                                     </td>
@@ -84,8 +84,11 @@
                                         <button type="button" class="btn-agri-outline py-1 px-2" style="font-size:0.75rem;"
                                             title="Download PDF" onclick="downloadRecordPDF(this)"
                                             data-type="crop"
-                                            data-date="{{ item.created_at.strftime('%Y-%m-%d %H:%M') if item.created_at else '' }}"
+                                            data-language="{{ current_lang }}"
+                                            data-date="{{ item.created_at_ist }}"
                                             data-name="{{ item.localized_crop or item.recommended_crop }}"
+                                            data-model-crop="{{ item.localized_crop or item.recommended_crop }}"
+                                            data-model-crop-key="{{ item.recommended_crop }}"
                                             data-confidence="{{ item.confidence or '99+' }}"
                                             data-n="{{ item.inputs.N if item.inputs else '' }}"
                                             data-p="{{ item.inputs.P if item.inputs else '' }}"
@@ -93,7 +96,15 @@
                                             data-temp="{{ item.inputs.temperature if item.inputs else '' }}"
                                             data-humidity="{{ item.inputs.humidity if item.inputs else '' }}"
                                             data-ph="{{ item.inputs.ph if item.inputs else '' }}"
-                                            data-rain="{{ item.inputs.rainfall if item.inputs else '' }}">
+                                            data-rain="{{ item.inputs.rainfall if item.inputs else '' }}"
+                                            data-season="{{ item.pdf_crop_details.season if item.pdf_crop_details else '' }}"
+                                            data-soil="{{ item.pdf_crop_details.soil if item.pdf_crop_details else '' }}"
+                                            data-optimal-temp="{{ item.pdf_crop_details.temperature if item.pdf_crop_details else '' }}"
+                                            data-optimal-humidity="{{ item.pdf_crop_details.humidity if item.pdf_crop_details else '' }}"
+                                            data-ideal-ph="{{ item.pdf_crop_details.ph if item.pdf_crop_details else '' }}"
+                                            data-optimal-rain="{{ item.pdf_crop_details.rainfall if item.pdf_crop_details else '' }}"
+                                            data-care="{{ item.pdf_crop_details.care if item.pdf_crop_details else '' }}"
+                                            data-alternatives='{{ item.pdf_alternatives|default([], true)|tojson }}'>
                                             📄
                                         </button>
                                     </td>
@@ -137,7 +148,7 @@
                             <tbody>
                                 {% for item in recent_diseases %}
                                 <tr>
-                                    <td>{{ item.created_at.strftime('%Y-%m-%d %H:%M') if item.created_at else 'Recent' }}</td>
+                                    <td>{{ item.created_at_ist or 'Recent' }}</td>
                                     <td>
                                         {% if item.image_filename %}
                                         <img src="{{ url_for('uploaded_file', filename=item.image_filename) }}" width="42" height="42" class="rounded-2 border border-secondary border-opacity-25" style="object-fit: cover;" alt="Leaf">
@@ -157,7 +168,8 @@
                                         <button type="button" class="btn-agri-outline py-1 px-2" style="font-size:0.75rem;"
                                             title="Download PDF" onclick="downloadRecordPDF(this)"
                                             data-type="disease"
-                                            data-date="{{ item.created_at.strftime('%Y-%m-%d %H:%M') if item.created_at else '' }}"
+                                            data-language="{{ current_lang }}"
+                                            data-date="{{ item.created_at_ist }}"
                                             data-name="{{ item.localized_disease or item.disease_name }}"
                                             data-confidence="{{ item.confidence }}"
                                             data-solution="{{ item.localized_solution or '' }}"
@@ -192,12 +204,31 @@
 const FALLBACK_BG = "#0f1714"; // change to match your theme's dark background
 
 const REPORT_LABELS = {
+  language: {{ current_lang|tojson }},
   date: {{ t('table_date')|tojson }},
-  crop: {{ t('table_crop')|tojson }},
-  disease: {{ t('table_disease')|tojson }},
-  confidence: {{ t('table_confidence')|tojson }},
-  solution: {{ t('table_solution')|tojson }},
+  crop: {{ t('result_recommended_crop')|tojson }},
+  disease: {{ t('result_disease_detected')|tojson }},
+  cropTitle: {{ t('nav_crop')|tojson }},
+  diseaseTitle: {{ t('nav_disease')|tojson }},
+  confidence: {{ t('result_confidence')|tojson }},
+  solution: {{ t('result_treatment')|tojson }},
   app: {{ t('app_name')|tojson }},
+  reportSuffix: {{ t('pdf_report_suffix')|tojson }},
+  modelOutput: {{ t('pdf_model_output')|tojson }},
+  inputConditions: {{ t('pdf_soil_climate_inputs')|tojson }},
+  generatedOn: {{ t('pdf_generated_on')|tojson }},
+  nitrogen: {{ t('nitrogen_label')|tojson }},
+  phosphorus: {{ t('phosphorus_label')|tojson }},
+  potassium: {{ t('potassium_label')|tojson }},
+  temperature: {{ t('temperature_label')|tojson }},
+  humidity: {{ t('humidity_label')|tojson }},
+  ph: {{ t('ph_label')|tojson }},
+  rainfall: {{ t('rainfall_label')|tojson }},
+  growingConditions: {{ t('result_growing_conditions')|tojson }},
+  season: {{ t('result_season')|tojson }},
+  soil: {{ t('result_soil')|tojson }},
+  care: {{ t('result_care')|tojson }},
+  alternatives: {{ t('result_alternative_crops')|tojson }},
 };
 
 /* ───────────── Full dashboard PDF (top button) ───────────── */
@@ -305,36 +336,68 @@ async function downloadRecordPDF(btn) {
     const head = mk("div", "border-bottom:3px solid #16a34a;padding-bottom:14px;margin-bottom:22px;");
     head.appendChild(mk("div", "font-size:26px;font-weight:800;color:#16a34a;", "🌱 " + REPORT_LABELS.app));
     head.appendChild(mk("div", "font-size:18px;font-weight:600;margin-top:4px;",
-      d.type === "crop" ? "Crop Recommendation Report" : "Leaf Disease Report"));
+      (d.type === "crop" ? REPORT_LABELS.cropTitle : REPORT_LABELS.diseaseTitle) + " " + REPORT_LABELS.reportSuffix));
     wrap.appendChild(head);
+    wrap.lang = d.language || REPORT_LABELS.language;
 
     const table = mk("table", "width:100%;border-collapse:collapse;font-size:15px;margin-bottom:18px;");
 
     if (d.type === "crop") {
       addReportRow(table, REPORT_LABELS.date, d.date);
       addReportRow(table, REPORT_LABELS.crop, d.name);
+      addReportRow(table, REPORT_LABELS.modelOutput, d.modelCrop);
       addReportRow(table, REPORT_LABELS.confidence, d.confidence + "%");
       wrap.appendChild(table);
 
       const inputs = mk("table", "width:100%;border-collapse:collapse;font-size:15px;");
-      addReportRow(inputs, "Nitrogen (N)", d.n);
-      addReportRow(inputs, "Phosphorus (P)", d.p);
-      addReportRow(inputs, "Potassium (K)", d.k);
-      addReportRow(inputs, "Temperature (°C)", d.temp);
-      addReportRow(inputs, "Humidity (%)", d.humidity);
-      addReportRow(inputs, "pH", d.ph);
-      addReportRow(inputs, "Rainfall (mm)", d.rain);
+      addReportRow(inputs, REPORT_LABELS.nitrogen, d.n);
+      addReportRow(inputs, REPORT_LABELS.phosphorus, d.p);
+      addReportRow(inputs, REPORT_LABELS.potassium, d.k);
+      addReportRow(inputs, REPORT_LABELS.temperature, d.temp);
+      addReportRow(inputs, REPORT_LABELS.humidity, d.humidity);
+      addReportRow(inputs, REPORT_LABELS.ph, d.ph);
+      addReportRow(inputs, REPORT_LABELS.rainfall, d.rain);
       if (inputs.children.length) {
-        wrap.appendChild(mk("div", "font-size:16px;font-weight:700;margin:6px 0 8px;", "Soil & climate inputs"));
+        wrap.appendChild(mk("div", "font-size:16px;font-weight:700;margin:6px 0 8px;", REPORT_LABELS.inputConditions));
         wrap.appendChild(inputs);
       }
-    } else {
-      if (d.img) {
-        const img = mk("img", "width:220px;height:220px;object-fit:cover;border-radius:10px;border:1px solid #d1d5db;margin-bottom:18px;display:block;");
-        img.crossOrigin = "anonymous";
-        await new Promise((res) => { img.onload = img.onerror = res; img.src = d.img; });
-        wrap.appendChild(img);
+
+      const details = mk("table", "width:100%;border-collapse:collapse;font-size:15px;margin-top:18px;");
+      addReportRow(details, REPORT_LABELS.season, d.season);
+      addReportRow(details, REPORT_LABELS.soil, d.soil);
+      addReportRow(details, REPORT_LABELS.temperature, d.optimalTemp);
+      addReportRow(details, REPORT_LABELS.humidity, d.optimalHumidity);
+      addReportRow(details, REPORT_LABELS.ph, d.idealPh);
+      addReportRow(details, REPORT_LABELS.rainfall, d.optimalRain);
+      if (details.children.length) {
+        wrap.appendChild(mk("div", "font-size:16px;font-weight:700;margin:18px 0 8px;", REPORT_LABELS.growingConditions));
+        wrap.appendChild(details);
       }
+
+      if (d.care) {
+        wrap.appendChild(mk("div", "font-size:16px;font-weight:700;margin:18px 0 8px;", REPORT_LABELS.care));
+        wrap.appendChild(mk("div", "font-size:15px;color:#374151;background:#f3f4f6;padding:14px;border-radius:8px;white-space:pre-wrap;", d.care));
+      }
+
+      const alternatives = JSON.parse(d.alternatives || "[]")
+        .filter((alternative) => alternative.crop_key !== d.modelCropKey);
+      if (alternatives.length) {
+        const alternativeRows = mk("div", "font-size:15px;");
+        alternatives.forEach((alternative) => {
+          alternativeRows.appendChild(mk("div", "padding:6px 12px;border-bottom:1px solid #e5e7eb;color:#111827;", alternative.crop_name));
+        });
+        wrap.appendChild(mk("div", "font-size:16px;font-weight:700;margin:18px 0 8px;", REPORT_LABELS.alternatives));
+        wrap.appendChild(alternativeRows);
+      }
+    } else {
+      if (!d.img) throw new Error("The uploaded leaf image for this diagnosis is unavailable.");
+      const img = mk("img", "max-width:220px;max-height:220px;object-fit:contain;border-radius:10px;border:1px solid #d1d5db;margin-bottom:18px;display:block;");
+      await new Promise((resolve, reject) => {
+        img.onload = resolve;
+        img.onerror = () => reject(new Error("The uploaded leaf image could not be loaded."));
+        img.src = d.img;
+      });
+      wrap.appendChild(img);
       addReportRow(table, REPORT_LABELS.date, d.date);
       addReportRow(table, REPORT_LABELS.disease, d.name);
       addReportRow(table, REPORT_LABELS.confidence, d.confidence + "%");
@@ -347,7 +410,7 @@ async function downloadRecordPDF(btn) {
     }
 
     wrap.appendChild(mk("div", "margin-top:28px;font-size:12px;color:#9ca3af;",
-      "Generated on " + new Date().toLocaleString() + " by " + REPORT_LABELS.app));
+      REPORT_LABELS.generatedOn + " " + new Date().toLocaleString(REPORT_LABELS.language, { timeZone: "Asia/Kolkata" }) + " — " + REPORT_LABELS.app));
 
     document.body.appendChild(wrap);
 

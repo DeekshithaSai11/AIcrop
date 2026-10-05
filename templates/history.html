@@ -47,7 +47,7 @@
                     <tbody>
                         {% for item in all_crops %}
                         <tr>
-                            <td>{{ item.created_at.strftime('%Y-%m-%d %H:%M') if item.created_at else 'Recent' }}</td>
+                            <td>{{ item.created_at_ist or 'Recent' }}</td>
                             <td>{{ item.inputs.N if item.inputs else '--' }}</td>
                             <td>{{ item.inputs.P if item.inputs else '--' }}</td>
                             <td>{{ item.inputs.K if item.inputs else '--' }}</td>
@@ -96,7 +96,7 @@
                     <tbody>
                         {% for item in all_diseases %}
                         <tr>
-                            <td>{{ item.created_at.strftime('%Y-%m-%d %H:%M') if item.created_at else 'Recent' }}</td>
+                            <td>{{ item.created_at_ist or 'Recent' }}</td>
                             <td>
                                 {% if item.image_filename %}
                                 <a href="{{ url_for('uploaded_file', filename=item.image_filename) }}" target="_blank">

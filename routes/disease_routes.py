@@ -7,9 +7,10 @@ and prediction history persistence in MongoDB.
 import os
 import uuid
 import logging
+from datetime import datetime, timezone
 from flask import Blueprint, render_template, request, redirect, url_for, session, flash, current_app, jsonify
 from werkzeug.utils import secure_filename
-from db import disease_predictions_collection, get_server_time
+from db import disease_predictions_collection
 from utils.auth_utils import login_required
 from utils.validators import is_allowed_file
 from utils.model_loader import predict_disease
@@ -129,7 +130,7 @@ def predict_disease_route():
                 "cause":          pathology.get("cause", ""),
                 "solution":       pathology.get("treatment", ""),
                 "model_engine":   engine_used,
-                "created_at":     get_server_time(),
+                "created_at":     datetime.now(timezone.utc),
             }
             disease_predictions_collection.insert_one(prediction_doc)
         except Exception as db_err:

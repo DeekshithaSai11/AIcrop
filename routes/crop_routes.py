@@ -69,6 +69,7 @@ def predict_crop_route():
         "recommended_crop": recommended_crop,
         "confidence":       confidence,
         "crop_details":     crop_details,
+        "alternatives":     localized_alternatives,
         "created_at":       datetime.now(timezone.utc),
     }
     
@@ -82,7 +83,10 @@ def predict_crop_route():
         "confidence":       confidence,
         "details":          crop_details,
         "inputs":           features,
-        "alternatives":     localized_alternatives
+        "alternatives":     [
+            {"crop_key": alt["crop_key"], "crop_name": alt["crop_name"]}
+            for alt in localized_alternatives
+        ]
     }
 
     if request.is_json:

@@ -75,7 +75,7 @@
                 <!-- User Session Actions -->
                 <div class="d-flex align-items-center gap-2">
                     {% if session.get('user_id') %}
-                    <a href="{{ url_for('auth.logout') }}" class="btn-agri-outline py-1 px-3" style="font-size:0.88rem;">
+                    <a href="{{ url_for('auth.logout') }}" class="btn-agri-outline py-1 px-3" style="font-size:0.88rem;" onclick="return confirm('Are you sure you want to logout?')">
                         <span>🚪</span> {{ t('nav_logout') }}
                     </a>
                     {% else %}
